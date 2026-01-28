@@ -1,49 +1,10 @@
-.PHONY: help dev container deploy open down test merge
+.PHONY: help test clean merge
 
 help:
-	@echo "Available commands:"
-	@echo "  make dev              - Run development runtime to edit configurations"
-	@echo "  make container        - Build Docker container for deployment"
-	@echo "  make deploy           - Run packaged configuration (read-only)"
-	@echo "  make open             - Open browser for running containers"
-	@echo "  make down             - Shut down containers"
-## <!-- TEMPLATE_SPECIFIC_START -->
-## This section will be removed during template processing
 	@echo "  make test             - Run tests using ~/temp folder"
 	@echo "  make clean            - Clean up temporary test files"
 	@echo "  make merge            - Merge templates and remove template configuration"
-## <!-- TEMPLATE_SPECIFIC_END -->
 
-dev:
-	@echo "Shutting down centralized services..."
-	@{{product.organization.developer_cli}} down || true
-	@echo "Starting local development services..."
-	@export INPUT_FOLDER=$$(pwd)/configurator && docker compose up -d
-	@make open
-
-container:
-	@echo "Building Docker container image..."
-	docker build -t $(IMAGE_NAME) .
-	make deploy
-
-deploy:
-	@echo "Deploying packaged configuration..."
-	make down
-	{{product.organization.developer_cli}} up configurator
-	make open
-
-open:
-	@echo "Opening browser..."
-	open -a 'Google Chrome' 'http://localhost:8181' || google-chrome 'http://localhost:8181' || xdg-open 'http://localhost:8181'
-
-down:
-	@echo "Shutting down local containers..."
-	@docker compose down || true
-	@echo "Shutting down centralized services..."
-	@{{product.organization.developer_cli}} down || true
-
-## <!-- TEMPLATE_SPECIFIC_START -->
-## This section will be removed during template processing
 test:
 	@TEMP_REPO="$$HOME/tmp/testRepo"; \
 	echo "Setting up temporary testing folder at $$TEMP_REPO..."; \
@@ -89,4 +50,3 @@ merge:
 
 %:
 	@:
-## <!-- TEMPLATE_SPECIFIC_END -->

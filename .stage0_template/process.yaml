@@ -32,10 +32,14 @@ templates:
     merge: true
   - path: "./LICENSE"
     merge: true
-  - path: "./makefile"
-    merge: true
   - path: "./README.md"
     merge: true
+
+  # Makefile to overwrite Template Makefile
+  - path: "./Makefile.template"
+    mergeFor:
+      items: ["one"]
+      output: "./Makefile"
 
   # Configurations from data_catalog
   - path: "./configurator/configurations/collection.yaml.template"
