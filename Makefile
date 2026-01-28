@@ -1,4 +1,4 @@
-.PHONY: help dev container deploy open down test check-root clean-test setup-test debug-specs run-test-container check-output
+.PHONY: help dev container deploy open down test merge
 
 help:
 	@echo "Available commands:"
@@ -7,47 +7,12 @@ help:
 	@echo "  make deploy           - Run packaged configuration (read-only)"
 	@echo "  make open             - Open browser for running containers"
 	@echo "  make down             - Shut down containers"
-	@echo "  make test             - Run Stage0 template tests in a container"
-
-TEMP_REPO ?= $(HOME)/tmp/testRepo
-LOG_LEVEL ?= INFO
-IMAGE ?= ghcr.io/agile-learning-institute/stage0_runbook_merge:latest
-SERVICE_NAME ?= mongodb
-
-check-root:
-	@if [ ! -e ./.stage0_template ]; then \
-		echo "Error: This target must be run from the root of the repo. Ensure the repo is an unprocessed Stage0 template repository."; \
-		exit 1; \
-	fi
-
-clean-test:
-	@echo "Cleaning temporary testing folder at $(TEMP_REPO)..."
-	@rm -rf "$(TEMP_REPO)"
-
-setup-test: check-root clean-test
-	@echo "Setting up temporary testing folder at $(TEMP_REPO)..."
-	@mkdir -p "$(TEMP_REPO)"
-	@cp -r . "$(TEMP_REPO)"
-
-debug-specs:
-	@echo "Debug: Checking specifications structure..."
-	@find .stage0_template/test_data -name "*.yaml" | head -10
-
-run-test-container:
-	@echo "Running the container..."
-	docker run --rm \
-		-v "$(TEMP_REPO):/repo" \
-		-v "$(PWD)/.stage0_template/test_data:/specifications" \
-		-e LOG_LEVEL="$(LOG_LEVEL)" \
-		-e SERVICE_NAME="$(SERVICE_NAME)" \
-		"$(IMAGE)"
-
-check-output:
-	@echo "Checking output..."
-	@diff -qr "$(PWD)/.stage0_template/test_expected/" "$(TEMP_REPO)/"
-	@echo "Done."
-
-test: setup-test debug-specs run-test-container check-output
+## <!-- TEMPLATE_SPECIFIC_START -->
+## This section will be removed during template processing
+	@echo "  make test             - Run tests using ~/temp folder"
+	@echo "  make clean            - Clean up temporary test files"
+	@echo "  make merge            - Merge templates and remove template configuration"
+## <!-- TEMPLATE_SPECIFIC_END -->
 
 dev:
 	@echo "Shutting down centralized services..."
@@ -76,3 +41,52 @@ down:
 	@docker compose down || true
 	@echo "Shutting down centralized services..."
 	@{{product.organization.developer_cli}} down || true
+
+## <!-- TEMPLATE_SPECIFIC_START -->
+## This section will be removed during template processing
+test:
+	@TEMP_REPO="$$HOME/tmp/testRepo"; \
+	echo "Setting up temporary testing folder at $$TEMP_REPO..."; \
+	rm -rf "$$TEMP_REPO"; \
+	mkdir -p "$$TEMP_REPO"; \
+	cp -r . "$$TEMP_REPO"
+	@echo "Debug: Checking specifications structure..."; \
+	find .stage0_template/test_data -name "*.yaml" | head -10
+	@echo "Running the container..."; \
+	LOG_LEVEL="$${LOG_LEVEL:-INFO}"; \
+	docker run --rm \
+		-v "$$HOME/tmp/testRepo:/repo" \
+		-v "$$(pwd)/.stage0_template/test_data:/specifications" \
+		-e LOG_LEVEL="$$LOG_LEVEL" \
+		-e SERVICE_NAME=mongodb \
+		ghcr.io/agile-learning-institute/stage0_runbook_merge:latest
+	@echo "Checking output..."; \
+	diff -qr "$$(pwd)/.stage0_template/test_expected/" "$$HOME/tmp/testRepo/"
+	@echo "Done."
+
+clean:
+	@echo "Removing temporary test repo at $$HOME/tmp/testRepo..."; \
+	rm -rf "$$HOME/tmp/testRepo"
+
+merge:
+	@CONTEXT_PATH="$(firstword $(filter-out $@,$(MAKECMDGOALS)))"; \
+	if [ -z "$$CONTEXT_PATH" ]; then \
+		echo "Usage: make merge /path/to/specifications"; \
+		exit 1; \
+	fi; \
+	if [ ! -d "$$CONTEXT_PATH" ]; then \
+		echo "Error: $$CONTEXT_PATH does not exist or is not a directory"; \
+		exit 1; \
+	fi; \
+	echo "Running merge with specifications from $$CONTEXT_PATH"; \
+	LOG_LEVEL="$${LOG_LEVEL:-INFO}"; \
+	docker run --rm \
+		-v "$$(pwd):/repo" \
+		-v "$$CONTEXT_PATH:/specifications" \
+		-e LOG_LEVEL="$$LOG_LEVEL" \
+		-e SERVICE_NAME=mongodb \
+		ghcr.io/agile-learning-institute/stage0_runbook_merge:latest
+
+%:
+	@:
+## <!-- TEMPLATE_SPECIFIC_END -->

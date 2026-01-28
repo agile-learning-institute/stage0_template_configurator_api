@@ -1,15 +1,29 @@
 <!-- TEMPLATE_SPECIFIC_START -->
 <!-- This section will be removed during template processing -->
-## This is a Stage0 Template Merge Repo
-This repository is a template to create a custom mongodb_configurator_api for your system.
-For template usage instructions, see the [template README](.stage0_template/README.md).
-<!-- TEMPLATE_SPECIFIC_END -->
-# {{product_info.product}} Mongodb Configurator API
+## This is a Stage0 Merge Template
+This repository is a template to create a custom configurator_api for your system. See [Processing Instructions](./.stage0_template/process.yaml)]for details and [Test Specifications](./.stage0_template/Specifications/) for sample context data.
 
-This repo contains the MongodDB Database Configurations for the {{product_info.product}} system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
+Template Commands
+```sh
+# Test the Template using test_expected 
+# Creates ~/temp content
+make test
+
+## Clean up temp files from testing
+make clean
+
+## Process this merge template using the provided context path
+## NOTE: Destructive action, will remove .stage0_template 
+make merge <context path>
+```
+
+<!-- TEMPLATE_SPECIFIC_END -->
+# {{product.info.name}} Mongodb Configurator API
+
+This repo contains the MongodDB Database Configurations for the {{product.info.name}} system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
 
 ## Prerequisites
-- {{product_info.product}} [Developers Edition]({{product_info.main_repo}}/blob/main/CONTRIBUTING.md)
+- {{product.info.name}} [Developers Edition]({{org.git_host}}/{{org.git_org}}/{{product.info.slug}}/blob/main/CONTRIBUTING.md)
 
 ## Developer Commands
 ```sh
