@@ -1,6 +1,6 @@
 # Use Configurator API Base Image
 FROM ghcr.io/agile-learning-institute/mongodb_configurator_api:latest
-LABEL org.opencontainers.image.source="{{product.organization.git_host}}/.{{product.organization.git_org}}/configurator_api"
+LABEL org.opencontainers.image.source="{{org.git_host}}/.{{org.git_org}}/configurator_api"
 
 # Switch to root to set up /input directory
 USER root

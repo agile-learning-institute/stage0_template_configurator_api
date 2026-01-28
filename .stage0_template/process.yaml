@@ -1,60 +1,51 @@
 $schema: "https://stage0/schemas/process.schema.yaml"
 $id: "https://stage0/template-mongodb-api/process.yaml"
-title: Process file for a MongoDB configuration API template
+title: Process file for a MongoDB configurator API template
 version: "1.0"
 
-environment:
-  SERVICE_NAME: The service domain name (e.g., mongodb)
-
 context:
-  - key: architecture
+  - key: org
     type: path
-    path: specifications.architecture
-  - key: service
-    type: selector
-    path: architecture.domains
-    filter:
-      property: name
-      value: "{{SERVICE_NAME}}"
-  - key: data_catalog
+    path: specifications.product.organization
+  - key: catalog
     type: path
-    path: specifications.data_catalog
-  - key: product_info
-    type: path
-    path: specifications.product
+    path: specifications.catalog
 
 requires:
-  - product_info.product
-  - product_info.organization
-  - service.data.creates
-  - data_catalog.dictionaries
+  - org.name
+  - org.founded
+  - org.git_host
+  - org.git_org
+  - org.docker_host
+  - org.docker_org
+  - catalog.dictionaries
 
 templates:
-  - path: "./README.md"
-    merge: true
-  - path: "./makefile"
+  - path: "./.github/workflows/docker-push.yml"
     merge: true
   - path: "./Dockerfile"
     merge: true
-  - path: "./docker-compose.yaml"
+  - path: "./LICENSE"
     merge: true
-  - path: "./input/data/enumerators.json"
+  - path: "./makefile"
+    merge: true
+  - path: "./README.md"
     merge: true
 
-  # Collections from data_catalog
-  - path: "./input/collections/collection.yaml.template"
+  # Configurations from data_catalog
+  - path: "./configurator/configurations/collection.yaml.template"
     mergeFor:
-      items: data_catalog.dictionaries
-      output: "./input/collections/{{name}}.yaml"
+      items: catalog.dictionaries
+      output: "./configurator/configurations/{{name}}.{{version}}.yaml"
 
-  # Dictionaries from specifications.dictionary
-  - path: "./input/dictionary/dictionary.yaml.template"
+  # Dictionaries from catalog
+  - path: "./configurator/dictionaries/dictionary.yaml.template"
     mergeFor:
-      items: specifications.dictionary
-      output: "./input/dictionary/{{name}}.1.0.0.yaml"
+      items: catalog.dictionaries
+      output: "./configurator/dictionaries/{{name}}.{{version}}.yaml"
 
-  # Types - process each type file individually
-  - path: "./input/dictionary/types/type.yaml.template"
+  # Test Data from data_catalog
+  - path: "./configurator/test_data/types/type.yaml.template"
     mergeFor:
-      items: specifications.types
-      output: "./input/dictionary/types/{{name}}.yaml"
+      items: catalog.dictionaries
+      output: "./configurator/test_data/types/{{name}}.{{version}}.json"
