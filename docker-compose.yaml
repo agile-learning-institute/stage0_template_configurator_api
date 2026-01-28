@@ -1,8 +1,6 @@
 # docker-compose.yaml for Editing MongoDB Configurations
 services:
   ##################################
-  # Backing Services 
-  ##################################
   # MongoDB backing service 
   mongodb:
     image: mongo:7.0.5
@@ -20,15 +18,14 @@ services:
 
   ##################################
   # MongoDB Configurator API - Dev Mode (mounts ./configurator to /input)
-  ##################################
-  mongodb_dev_api:
-    image: ghcr.io/agile-learning-institute/mongodb_configurator_api:latest
+  configurator_api:
+    image: {{product.organization.git_host}}/.{{product.organization.git_org}}/{{product.organization.docker_org}}/configurator_api:latest
     restart: no
     ports:
       - 8180:8081
     environment:
       MONGODB_REQUIRE_TLS: False
-      MONGO_DB_NAME: engagement
+      MONGO_DB_NAME: {{product.info.mongodb_name}}
       AUTO_PROCESS: False
       LOAD_TEST_DATA: True
       API_PORT: 8180
@@ -40,16 +37,17 @@ services:
       mongodb:
         condition: service_healthy
 
-  mongodb_dev_spa:
+  ##################################
+  # MongoDB Configurator SPA
+  configurator_spa:
     image: ghcr.io/agile-learning-institute/mongodb_configurator_spa:latest
     restart: no
     environment:
-      API_HOST: mongodb_dev_api
+      API_HOST: configurator_api
       API_PORT: 8081
       SPA_PORT: 8181
     ports:
       - 8181:8181
     depends_on:
-      mongodb_dev_api:
+      configurator_api:
         condition: service_started
-

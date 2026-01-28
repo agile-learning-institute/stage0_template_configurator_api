@@ -1,0 +1,22 @@
+file_name: {{name}}.{{version}}.yaml
+root:
+  name: {{name}}
+  description: {{description}}
+  type: object
+  properties:
+  - name: _id
+    description: The unique identifier for the {{name}}.
+    type: identifier
+  - name: name
+    description: The searchable name of the document
+    type: word
+  - name: description
+    description: The description of the {{name}}.
+    type: sentence
+  - name: created
+    description: The tracking breadcrumb for when the document was created.
+    type: breadcrumb
+  - name: saved
+    description: The tracking breadcrumb for when the document was last saved.
+    type: breadcrumb
+

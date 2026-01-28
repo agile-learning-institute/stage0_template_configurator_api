@@ -1,7 +1,7 @@
+# docker-compose.yaml for Editing MongoDB Configurations
 services:
   ##################################
-  # MongoDB Backing Service
-  ##################################
+  # MongoDB backing service 
   mongodb:
     image: mongo:7.0.5
     ports:
@@ -9,84 +9,45 @@ services:
     extra_hosts:
       - "mongodb:127.0.0.1"
     healthcheck:
-      test: echo "try { rs.status() } catch (err) { rs.initiate({_id:'rs0',members:[{_id:0,host:'mongodb:27017'}]}) }" | mongosh --port 27017 --quiet
+      test: echo "db.runCommand('ping')" | mongosh --port 27017 --quiet
       interval: 5s
       timeout: 30s
       start_period: 0s
-      retries: 30
-    command: ["--replSet", "rs0", "--bind_ip_all", "--port", "27017"]
-    profiles:
-      - test
-      - prod
+      retries: 3
+    command: ["--bind_ip_all", "--port", "27017"]
 
-  #######################################
-  # MongoDB Utility testing service
-  #######################################
-  mongodb_api:
-    image: ghcr.io/agile-learning-institute/stage0_mongodb_api:latest
+  ##################################
+  # MongoDB Configurator API - Dev Mode (mounts ./configurator to /input)
+  configurator_api:
+    image: {{product.organization.git_host}}/.{{product.organization.git_org}}/{{product.organization.docker_org}}/configurator_api:latest
     restart: no
     ports:
-      - 8081:8081
+      - 8180:8081
     environment:
-      MONGO_CONNECTION_STRING: mongodb://mongodb:27017/?replicaSet=rs0
+      MONGODB_REQUIRE_TLS: False
+      MONGO_DB_NAME: {{product.info.mongodb_name}}
       AUTO_PROCESS: False
       LOAD_TEST_DATA: True
-      MONGO_DB_NAME: test_database
-      MONGODB_API_PORT: 8081
+      API_PORT: 8180
+      SPA_PORT: 8181
+      INPUT_FOLDER: /input
     volumes:
-      - ./input:/input
+      - ${INPUT_FOLDER:-./configurator}:/input
     depends_on:
       mongodb:
         condition: service_healthy
-    profiles:
-      - test
 
-  mongodb_spa:
-    image: ghcr.io/agile-learning-institute/stage0_mongodb_spa:latest
+  ##################################
+  # MongoDB Configurator SPA
+  configurator_spa:
+    image: ghcr.io/agile-learning-institute/mongodb_configurator_spa:latest
     restart: no
     environment:
-      MONGODB_API_HOST: mongodb_api
-      MONGODB_API_PORT: 8081
-      MONGODB_SPA_PORT: 8082
+      API_HOST: configurator_api
+      API_PORT: 8081
+      SPA_PORT: 8181
     ports:
-      - 8082:8082
-    profiles:
-      - test
+      - 8181:8181
     depends_on:
-      mongodb_api:
-        condition: service_started
-
-  #######################################
-  # floppy MongoDB production like service
-  #######################################
-  mongo_api:
-    image: ghcr.io/some-test-org/floppy_mongodb_api:latest
-    restart: no
-    ports:
-      - 8081:8081
-    environment:
-      MONGO_CONNECTION_STRING: mongodb://mongodb:27017/?replicaSet=rs0
-      AUTO_PROCESS: False
-      LOAD_TEST_DATA: True
-      MONGO_DB_NAME: test_database
-      MONGODB_API_PORT: 8081
-    depends_on:
-      mongodb:
-        condition: service_healthy
-    profiles:
-      - prod
-
-  mongo_spa:
-    image: ghcr.io/agile-learning-institute/stage0_mongodb_spa:latest
-    restart: no
-    environment:
-      MONGODB_API_HOST: mongo_api
-      MONGODB_API_PORT: 8081
-      MONGODB_SPA_PORT: 8082
-    ports:
-      - 8082:8082
-    profiles:
-      - prod
-    depends_on:
-      mongo_api:
+      configurator_api:
         condition: service_started

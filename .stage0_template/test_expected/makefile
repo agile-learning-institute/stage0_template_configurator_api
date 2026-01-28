@@ -1,20 +1,37 @@
-# Makefile
+.PHONY: help dev container deploy open down
 
-.PHONY: local container down
+help:
+	@echo "Available commands:"
+	@echo "  make dev              - Run development runtime to edit configurations"
+	@echo "  make container        - Build Docker container for deployment"
+	@echo "  make deploy           - Run packaged configuration (read-only)"
+	@echo "  make open             - Open browser for running containers"
+	@echo "  make down             - Shut down containers"
 
-# Run the application locally
-test:
+dev:
+	@echo "Shutting down centralized services..."
+	@de down || true
+	@echo "Starting local development services..."
+	@export INPUT_FOLDER=$$(pwd)/configurator && docker compose up -d
+	@make open
+
+container:
+	@echo "Building Docker container image..."
+	docker build -t $(IMAGE_NAME) .
+	make deploy
+
+deploy:
+	@echo "Deploying packaged configuration..."
 	make down
-	docker compose --profile test up --detach
-	# docker compose logs -f "mongodb_api"
+	de up mongodb 
+	make open
 
-# Build and run the Docker container
-prod:
-	make down
-	docker build --tag ghcr.io/some-test-org/floppy_mongo_api:latest .
-	docker compose --profile prod up --detach
-	# docker compose logs -f "mongo_api"
+open:
+	@echo "Opening browser..."
+	open -a 'Google Chrome' 'http://localhost:8181' || google-chrome 'http://localhost:8181' || xdg-open 'http://localhost:8181'
 
-# Shut down testing containers and clean house
 down:
-	docker compose down mongodb mongodb_api mongodb_spa mongo_api mongo_spa
+	@echo "Shutting down local containers..."
+	@docker compose down || true
+	@echo "Shutting down centralized services..."
+	@de down || true

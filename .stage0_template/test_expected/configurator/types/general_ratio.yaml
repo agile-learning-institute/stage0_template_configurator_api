@@ -1,0 +1,21 @@
+_locked: false
+file_name: general_ratio.yaml
+root:
+  additional_properties: false
+  description: Ratio of General Sentiments
+  name: general_ratio
+  properties:
+  - description: The number of positive sentiments
+    name: positive
+    required: false
+    type: count
+  - description: The number of neutral sentiments
+    name: neutral
+    required: false
+    type: count
+  - description: The number of negative sentiments
+    name: negative
+    required: false
+    type: count
+  required: false
+  type: object
