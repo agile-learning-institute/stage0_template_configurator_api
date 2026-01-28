@@ -1,0 +1,26 @@
+file_name: Post.0.1.0.yaml
+root:
+  name: Post
+  description: The content published by a Creator on a Platform.
+  type: object
+  properties:
+  - name: id
+    description: The unique identifier for the Post.
+    type: identifier
+  - name: creator_id
+    description: The unique identifier for the Creator.
+    type: identifier
+  - name: platform_id
+    description: The unique identifier for the Platform.
+    type: identifier
+  - name: content
+    description: The content of the Post.
+    type: markdown
+  - name: comments
+    description: The comments on the Post.
+    type: array
+    items:
+      name: CommentThread Document ID
+      description: The unique identifier for the CommentThread.
+      type: identifier
+

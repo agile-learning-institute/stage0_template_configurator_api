@@ -1,0 +1,10 @@
+file_name: Post.yaml
+description: The content published by a **Creator** on a **Platform**.
+versions:
+- _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: Post.0.1.0.0.json
+  version: 0.1.0.0
+

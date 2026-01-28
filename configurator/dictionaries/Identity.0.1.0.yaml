@@ -1,0 +1,16 @@
+file_name: Identity.0.1.0.yaml
+root:
+  name: Identity
+  description: The Identity of a person who is a user of the CreatorDashboard system.
+  type: object
+  properties:
+  - name: id
+    description: The unique identifier for the Identity.
+    type: identifier
+  - name: user_name
+    description: The username used to log in with the Identity.
+    type: word
+  - name: email
+    description: The email address of the Identity.
+    type: email
+

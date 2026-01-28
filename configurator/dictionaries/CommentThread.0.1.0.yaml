@@ -1,0 +1,70 @@
+_locked: false
+file_name: CommentThread.0.1.0.yaml
+root:
+  additional_properties: false
+  description: Information about a YouTube comment thread.
+  name: CommentThread
+  properties:
+  - description: The API resource's type. Value is youtube#commentThread.
+    name: kind
+    required: false
+    type: identifier
+  - description: The unique identifier for the CommentThread.
+    name: id
+    required: false
+    type: identifier
+  - description: The entity tag for the CommentThread.
+    name: etag
+    required: false
+    type: identifier
+  - additional_properties: false
+    description: Contains basic details about the CommentThread.
+    name: snippet
+    properties:
+    - description: The YouTube channel that is associated with the comments in the
+        thread.
+      name: channelId
+      required: false
+      type: identifier
+    - description: The ID of the video to which the comments refer.
+      name: videoId
+      required: false
+      type: identifier
+    - description: The thread's top-level Comment.
+      name: topLevelComment
+      required: false
+      type: identifier
+    - description: Indicates whether the current viewer can reply to the thread.
+      name: canReply
+      required: false
+      type: boolean
+    - description: The total number of replies that have been submitted in response
+        to the top-level comment.
+      name: totalReplyCount
+      required: false
+      type: count
+    - description: Indicates whether the thread, including all of its comments and
+        comment replies, is visible to all YouTube users.
+      name: isPublic
+      required: false
+      type: boolean
+    required: false
+    type: object
+  - additional_properties: false
+    description: A container that contains a list of replies to the comment, if any
+      exist.
+    name: replies
+    properties:
+    - description: A list of one or more replies to the top-level comment.
+      items:
+        description: The unique identifier for the Comment.
+        name: Comment Document ID
+        required: false
+        type: identifier
+      name: comments
+      required: false
+      type: array
+    required: false
+    type: object
+  required: false
+  type: object

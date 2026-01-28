@@ -1,0 +1,10 @@
+file_name: Comment.yaml
+description: A comment, created by a **User**, on a **Post**. A Comment can have **Comments**
+versions:
+- _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: Comment.0.1.0.0.json
+  version: 0.1.0.0
+

@@ -1,0 +1,1210 @@
+[
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439011"
+    },
+    "name": "SentimentAnalysisRun1",
+    "status": "scheduled",
+    "description": "Initial test run for sentiment analysis evaluation",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439021"
+    },
+    "prompt_name": "sentiment-analysis-v1",
+    "model": "deepseek-r1:70b",
+    "created": {
+      "from_ip": "192.168.1.100",
+      "at_time": {
+        "$date": "2024-01-15T10:00:00Z"
+      },
+      "by_user": "testuser1",
+      "correlation_id": "corr-001"
+    },
+    "saved": {
+      "from_ip": "192.168.1.100",
+      "at_time": {
+        "$date": "2024-01-15T10:00:00Z"
+      },
+      "by_user": "testuser1",
+      "correlation_id": "corr-001"
+    },
+    "test_data": {
+      "selected": 100,
+      "tags": [
+        "youtube",
+        "comments"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439012"
+    },
+    "name": "SentimentAnalysisRun2",
+    "status": "running",
+    "description": "Active run processing test data with gpt-oss model",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439022"
+    },
+    "prompt_name": "sentiment-analysis-v2",
+    "model": "gpt-oss:120b",
+    "created": {
+      "from_ip": "192.168.1.101",
+      "at_time": {
+        "$date": "2024-01-15T11:00:00Z"
+      },
+      "by_user": "testuser2",
+      "correlation_id": "corr-002"
+    },
+    "saved": {
+      "from_ip": "192.168.1.101",
+      "at_time": {
+        "$date": "2024-01-15T11:15:00Z"
+      },
+      "by_user": "testuser2",
+      "correlation_id": "corr-003"
+    },
+    "started": {
+      "$date": "2024-01-15T11:10:00Z"
+    },
+    "test_data": {
+      "selected": 150,
+      "processed": 75,
+      "tags": [
+        "social",
+        "feedback"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799439031"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439032"
+      }
+    ],
+    "analysis": [
+      {
+        "dimension": "general",
+        "classification": "positive",
+        "count": 14,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "general",
+        "classification": "negative",
+        "count": 6,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "general",
+        "classification": "neutral",
+        "count": 10,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anticipation",
+        "count": 6,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "frustration",
+        "count": 3,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anger",
+        "count": 2,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "neutral",
+        "count": 10,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "joy",
+        "count": 3,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "surprise",
+        "count": 4,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "trust",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "fear",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "energizing",
+        "count": 4,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "draining",
+        "count": 3,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "neutral",
+        "count": 15,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "blocking",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "affirming",
+        "count": 6,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "tense",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439013"
+    },
+    "name": "SentimentAnalysisRun3",
+    "status": "complete",
+    "description": "Successfully completed evaluation run",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439023"
+    },
+    "prompt_name": "sentiment-analysis-v3",
+    "model": "gpt-oss:20b",
+    "created": {
+      "from_ip": "192.168.1.102",
+      "at_time": {
+        "$date": "2024-01-15T12:00:00Z"
+      },
+      "by_user": "testuser3",
+      "correlation_id": "corr-004"
+    },
+    "saved": {
+      "from_ip": "192.168.1.102",
+      "at_time": {
+        "$date": "2024-01-15T13:30:00Z"
+      },
+      "by_user": "testuser3",
+      "correlation_id": "corr-005"
+    },
+    "started": {
+      "$date": "2024-01-15T12:05:00Z"
+    },
+    "completed": {
+      "$date": "2024-01-15T13:25:00Z"
+    },
+    "test_data": {
+      "selected": 200,
+      "processed": 200,
+      "tags": [
+        "video",
+        "transcript"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799439041"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439042"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439043"
+      }
+    ],
+    "analysis": [
+      {
+        "dimension": "general",
+        "classification": "positive",
+        "count": 21,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "general",
+        "classification": "neutral",
+        "count": 14,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "general",
+        "classification": "negative",
+        "count": 10,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anticipation",
+        "count": 12,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "neutral",
+        "count": 15,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "surprise",
+        "count": 3,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anger",
+        "count": 4,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "trust",
+        "count": 5,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "joy",
+        "count": 5,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "sadness",
+        "count": 1,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "energizing",
+        "count": 14,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "neutral",
+        "count": 16,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "draining",
+        "count": 3,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "affirming",
+        "count": 7,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "tense",
+        "count": 2,
+        "model": "gpt-oss:20b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "blocking",
+        "count": 3,
+        "model": "gpt-oss:20b"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439014"
+    },
+    "name": "SentimentAnalysisRun4",
+    "status": "aborted",
+    "description": "Run aborted due to system error",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439024"
+    },
+    "prompt_name": "sentiment-analysis-v4",
+    "model": "nemotron-3-nano:30b",
+    "created": {
+      "from_ip": "192.168.1.103",
+      "at_time": {
+        "$date": "2024-01-15T14:00:00Z"
+      },
+      "by_user": "testuser4",
+      "correlation_id": "corr-006"
+    },
+    "saved": {
+      "from_ip": "192.168.1.103",
+      "at_time": {
+        "$date": "2024-01-15T14:20:00Z"
+      },
+      "by_user": "testuser4",
+      "correlation_id": "corr-007"
+    },
+    "started": {
+      "$date": "2024-01-15T14:05:00Z"
+    },
+    "completed": {
+      "$date": "2024-01-15T14:18:00Z"
+    },
+    "test_data": {
+      "selected": 80,
+      "processed": 35,
+      "tags": [
+        "test",
+        "sample"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799439051"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439015"
+    },
+    "name": "SentimentAnalysisRun5",
+    "status": "cancelled",
+    "description": "Run cancelled by user request",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439025"
+    },
+    "prompt_name": "sentiment-analysis-v5",
+    "model": "qwen3-coder:30b",
+    "created": {
+      "from_ip": "192.168.1.104",
+      "at_time": {
+        "$date": "2024-01-15T15:00:00Z"
+      },
+      "by_user": "testuser5",
+      "correlation_id": "corr-008"
+    },
+    "saved": {
+      "from_ip": "192.168.1.104",
+      "at_time": {
+        "$date": "2024-01-15T15:10:00Z"
+      },
+      "by_user": "testuser5",
+      "correlation_id": "corr-009"
+    },
+    "started": {
+      "$date": "2024-01-15T15:02:00Z"
+    },
+    "test_data": {
+      "selected": 120,
+      "processed": 45,
+      "tags": [
+        "experimental"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439016"
+    },
+    "name": "LargeScaleRun1",
+    "status": "running",
+    "description": "Large scale evaluation with deepseek model",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439026"
+    },
+    "prompt_name": "large-scale-v1",
+    "model": "deepseek-r1:70b",
+    "created": {
+      "from_ip": "192.168.1.105",
+      "at_time": {
+        "$date": "2024-01-16T09:00:00Z"
+      },
+      "by_user": "testuser6",
+      "correlation_id": "corr-010"
+    },
+    "saved": {
+      "from_ip": "192.168.1.105",
+      "at_time": {
+        "$date": "2024-01-16T09:30:00Z"
+      },
+      "by_user": "testuser6",
+      "correlation_id": "corr-011"
+    },
+    "started": {
+      "$date": "2024-01-16T09:05:00Z"
+    },
+    "test_data": {
+      "selected": 500,
+      "processed": 250,
+      "tags": [
+        "production",
+        "validation"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799439061"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439062"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439063"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439064"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439065"
+      }
+    ],
+    "analysis": [
+      {
+        "dimension": "general",
+        "classification": "neutral",
+        "count": 22,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "general",
+        "classification": "positive",
+        "count": 34,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "general",
+        "classification": "negative",
+        "count": 19,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "neutral",
+        "count": 25,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anticipation",
+        "count": 10,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "joy",
+        "count": 12,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anger",
+        "count": 3,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "fear",
+        "count": 2,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "sadness",
+        "count": 4,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "surprise",
+        "count": 1,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "disgust",
+        "count": 4,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "frustration",
+        "count": 6,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "trust",
+        "count": 8,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "neutral",
+        "count": 26,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "energizing",
+        "count": 17,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "affirming",
+        "count": 15,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "draining",
+        "count": 8,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "tense",
+        "count": 4,
+        "model": "deepseek-r1:70b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "blocking",
+        "count": 5,
+        "model": "deepseek-r1:70b"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439017"
+    },
+    "name": "QuickTestRun1",
+    "status": "complete",
+    "description": "Quick test run completed successfully",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439027"
+    },
+    "prompt_name": "quick-test-v1",
+    "model": "gpt-oss:120b",
+    "created": {
+      "from_ip": "192.168.1.106",
+      "at_time": {
+        "$date": "2024-01-16T10:00:00Z"
+      },
+      "by_user": "testuser7",
+      "correlation_id": "corr-012"
+    },
+    "saved": {
+      "from_ip": "192.168.1.106",
+      "at_time": {
+        "$date": "2024-01-16T10:45:00Z"
+      },
+      "by_user": "testuser7",
+      "correlation_id": "corr-013"
+    },
+    "started": {
+      "$date": "2024-01-16T10:05:00Z"
+    },
+    "completed": {
+      "$date": "2024-01-16T10:40:00Z"
+    },
+    "test_data": {
+      "selected": 50,
+      "processed": 50,
+      "tags": [
+        "quick",
+        "test"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799439071"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439072"
+      }
+    ],
+    "analysis": [
+      {
+        "dimension": "general",
+        "classification": "negative",
+        "count": 5,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "general",
+        "classification": "positive",
+        "count": 12,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "general",
+        "classification": "neutral",
+        "count": 13,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "sadness",
+        "count": 2,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "trust",
+        "count": 5,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "neutral",
+        "count": 14,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "joy",
+        "count": 6,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anger",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "fear",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "frustration",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "tense",
+        "count": 3,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "energizing",
+        "count": 8,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "neutral",
+        "count": 16,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "draining",
+        "count": 2,
+        "model": "gpt-oss:120b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "affirming",
+        "count": 1,
+        "model": "gpt-oss:120b"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439018"
+    },
+    "name": "ExperimentalRun1",
+    "status": "scheduled",
+    "description": "Experimental run scheduled for testing",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439028"
+    },
+    "prompt_name": "experimental-v1",
+    "model": "gpt-oss:20b",
+    "created": {
+      "from_ip": "192.168.1.107",
+      "at_time": {
+        "$date": "2024-01-16T11:00:00Z"
+      },
+      "by_user": "testuser8",
+      "correlation_id": "corr-014"
+    },
+    "saved": {
+      "from_ip": "192.168.1.107",
+      "at_time": {
+        "$date": "2024-01-16T11:00:00Z"
+      },
+      "by_user": "testuser8",
+      "correlation_id": "corr-014"
+    },
+    "test_data": {
+      "selected": 75,
+      "tags": [
+        "experimental",
+        "research"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439019"
+    },
+    "name": "ProductionRun1",
+    "status": "complete",
+    "description": "Production run with nemotron model",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439029"
+    },
+    "prompt_name": "production-v1",
+    "model": "nemotron-3-nano:30b",
+    "created": {
+      "from_ip": "192.168.1.108",
+      "at_time": {
+        "$date": "2024-01-16T12:00:00Z"
+      },
+      "by_user": "testuser9",
+      "correlation_id": "corr-015"
+    },
+    "saved": {
+      "from_ip": "192.168.1.108",
+      "at_time": {
+        "$date": "2024-01-16T13:00:00Z"
+      },
+      "by_user": "testuser9",
+      "correlation_id": "corr-016"
+    },
+    "started": {
+      "$date": "2024-01-16T12:05:00Z"
+    },
+    "completed": {
+      "$date": "2024-01-16T12:55:00Z"
+    },
+    "test_data": {
+      "selected": 300,
+      "processed": 300,
+      "tags": [
+        "production",
+        "validation",
+        "quality"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799439081"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439082"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439083"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799439084"
+      }
+    ],
+    "analysis": [
+      {
+        "dimension": "general",
+        "classification": "negative",
+        "count": 10,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "general",
+        "classification": "positive",
+        "count": 37,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "general",
+        "classification": "neutral",
+        "count": 13,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "trust",
+        "count": 6,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "disgust",
+        "count": 2,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "joy",
+        "count": 8,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anticipation",
+        "count": 15,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "surprise",
+        "count": 5,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "frustration",
+        "count": 1,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anger",
+        "count": 5,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "neutral",
+        "count": 14,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "fear",
+        "count": 2,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "sadness",
+        "count": 2,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "energizing",
+        "count": 17,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "neutral",
+        "count": 16,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "affirming",
+        "count": 16,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "tense",
+        "count": 4,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "draining",
+        "count": 5,
+        "model": "nemotron-3-nano:30b"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "blocking",
+        "count": 2,
+        "model": "nemotron-3-nano:30b"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439020"
+    },
+    "name": "CodeAnalysisRun1",
+    "status": "cancelled",
+    "description": "Code analysis run cancelled before completion",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439030"
+    },
+    "prompt_name": "code-analysis-v1",
+    "model": "qwen3-coder:30b",
+    "created": {
+      "from_ip": "192.168.1.109",
+      "at_time": {
+        "$date": "2024-01-16T14:00:00Z"
+      },
+      "by_user": "testuser10",
+      "correlation_id": "corr-017"
+    },
+    "saved": {
+      "from_ip": "192.168.1.109",
+      "at_time": {
+        "$date": "2024-01-16T14:15:00Z"
+      },
+      "by_user": "testuser10",
+      "correlation_id": "corr-018"
+    },
+    "started": {
+      "$date": "2024-01-16T14:03:00Z"
+    },
+    "completed": {
+      "$date": "2024-01-16T14:12:00Z"
+    },
+    "test_data": {
+      "selected": 90,
+      "processed": 30,
+      "tags": [
+        "code",
+        "analysis"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799439091"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439100"
+    },
+    "name": "HumanBaselineRun1",
+    "status": "complete",
+    "description": "Human baseline classifications for all test data",
+    "prompt_id": {
+      "$oid": "507f1f77bcf86cd799439099"
+    },
+    "prompt_name": "human-baseline-v1",
+    "model": "human",
+    "created": {
+      "from_ip": "192.168.1.200",
+      "at_time": {
+        "$date": "2024-01-14T10:00:00Z"
+      },
+      "by_user": "human-annotator",
+      "correlation_id": "human-001"
+    },
+    "saved": {
+      "from_ip": "192.168.1.200",
+      "at_time": {
+        "$date": "2024-01-14T12:00:00Z"
+      },
+      "by_user": "human-annotator",
+      "correlation_id": "human-002"
+    },
+    "started": {
+      "$date": "2024-01-14T10:05:00Z"
+    },
+    "completed": {
+      "$date": "2024-01-14T11:55:00Z"
+    },
+    "test_data": {
+      "selected": 15,
+      "processed": 15,
+      "tags": [
+        "youtube",
+        "comments",
+        "sentiment-analysis"
+      ]
+    },
+    "grades": [
+      {
+        "$oid": "507f1f77bcf86cd799431000"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431001"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431002"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431003"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431004"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431005"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431006"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431007"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431008"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431009"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431010"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431011"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431012"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431013"
+      },
+      {
+        "$oid": "507f1f77bcf86cd799431014"
+      }
+    ],
+    "analysis": [
+      {
+        "dimension": "general",
+        "classification": "positive",
+        "count": 119,
+        "model": "human"
+      },
+      {
+        "dimension": "general",
+        "classification": "neutral",
+        "count": 68,
+        "model": "human"
+      },
+      {
+        "dimension": "general",
+        "classification": "negative",
+        "count": 38,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "joy",
+        "count": 49,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "neutral",
+        "count": 78,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anticipation",
+        "count": 35,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "fear",
+        "count": 9,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "disgust",
+        "count": 7,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "anger",
+        "count": 7,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "trust",
+        "count": 14,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "surprise",
+        "count": 11,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "frustration",
+        "count": 6,
+        "model": "human"
+      },
+      {
+        "dimension": "emotional",
+        "classification": "sadness",
+        "count": 9,
+        "model": "human"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "energizing",
+        "count": 77,
+        "model": "human"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "neutral",
+        "count": 83,
+        "model": "human"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "draining",
+        "count": 10,
+        "model": "human"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "affirming",
+        "count": 30,
+        "model": "human"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "blocking",
+        "count": 17,
+        "model": "human"
+      },
+      {
+        "dimension": "design_thinking",
+        "classification": "tense",
+        "count": 8,
+        "model": "human"
+      }
+    ]
+  }
+]

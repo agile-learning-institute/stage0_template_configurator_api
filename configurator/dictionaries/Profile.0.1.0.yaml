@@ -1,0 +1,22 @@
+_locked: false
+file_name: Profile.0.1.0.yaml
+root:
+  additional_properties: false
+  description: User preferences for an Identity. A Profile can be associated with
+    one or more Users.
+  name: Profile
+  properties:
+  - description: The unique identifier for the Profile.
+    name: id
+    required: false
+    type: identifier
+  - description: The unique identifier for the Identity.
+    name: identity_id
+    required: false
+    type: word
+  - description: User preferences for the Profile.
+    name: preferences
+    required: false
+    type: word
+  required: false
+  type: object

@@ -1,0 +1,69 @@
+_locked: false
+file_name: Classification.yaml
+root:
+  description: Classifications with counters
+  name: Classification
+  properties:
+  - additional_properties: false
+    description: A General Classification
+    name: general_classification
+    properties:
+    - constant: general
+      description: The General Dimension
+      name: dimension
+      required: false
+      type: constant
+    - description: The classification within the dimension
+      enums: sentiment_general
+      name: classification
+      required: false
+      type: enum
+    - description: The model that created this classification
+      enums: ollama_models
+      name: model
+      required: false
+      type: enum
+    required: false
+    type: object
+  - additional_properties: false
+    description: A Emotional Classification
+    name: emotional
+    properties:
+    - constant: emotional
+      description: The Emotional Dimension
+      name: dimension
+      required: false
+      type: constant
+    - description: The classification within the dimension
+      enums: sentiment_emotional
+      name: classification
+      required: false
+      type: enum
+    - description: The model that created this classification
+      name: model
+      required: false
+      type: word
+    required: false
+    type: object
+  - additional_properties: false
+    description: A Design Thinking Classification
+    name: design_thinking
+    properties:
+    - constant: design_thinking
+      description: The General Dimension
+      name: dimension
+      required: false
+      type: constant
+    - description: The classification within the dimension
+      enums: sentiment_design_thinking
+      name: classification
+      required: false
+      type: enum
+    - description: The model that created this classification
+      name: model
+      required: false
+      type: word
+    required: false
+    type: object
+  required: false
+  type: one_of

@@ -1,0 +1,30 @@
+_locked: false
+file_name: Create.0.1.0.yaml
+root:
+  additional_properties: false
+  description: A Create Sample Collection for Templates
+  name: root
+  properties:
+  - description: ''
+    name: _id
+    required: false
+    type: identifier
+  - description: ''
+    name: name
+    required: false
+    type: word
+  - description: ''
+    name: description
+    required: false
+    type: sentence
+  - description: ''
+    enums: default_status
+    name: status
+    required: false
+    type: enum
+  - description: ''
+    name: created
+    required: false
+    type: breadcrumb
+  required: false
+  type: object

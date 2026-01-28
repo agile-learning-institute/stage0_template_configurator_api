@@ -1,0 +1,11 @@
+_locked: false
+description: Control Sample Collection for Templates
+file_name: Control.yaml
+title: ''
+versions:
+- _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: Control.0.1.0.0.json
+  version: 0.1.0.0

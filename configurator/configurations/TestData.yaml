@@ -1,0 +1,11 @@
+_locked: false
+description: Test Data for the Sentiment Evaluator
+file_name: TestData.yaml
+title: ''
+versions:
+- _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: TestData.0.1.0.0.json
+  version: 0.1.0.0

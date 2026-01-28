@@ -1,0 +1,10 @@
+file_name: CommentThread.yaml
+description: A list of comments, created by a **User**, on a **Post**. A CommentThread can have **Comments**
+versions:
+- _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: CommentThread.0.1.0.0.json
+  version: 0.1.0.0
+

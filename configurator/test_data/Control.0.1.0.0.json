@@ -1,0 +1,362 @@
+[
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439011" },
+    "created": {
+      "at_time": { "$date": "2023-01-15T10:00:00Z" },
+      "by_user": "user001",
+      "correlation_id": "corr001",
+      "from_ip": "192.168.1.1"
+    },
+    "description": "Sample control description 1",
+    "name": "control-name-1",
+    "saved": {
+      "at_time": { "$date": "2023-01-15T10:00:00Z" },
+      "by_user": "user001",
+      "correlation_id": "corr001",
+      "from_ip": "192.168.1.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439012" },
+    "created": {
+      "at_time": { "$date": "2023-02-20T14:30:00Z" },
+      "by_user": "user002",
+      "correlation_id": "corr002",
+      "from_ip": "10.0.0.1"
+    },
+    "description": "Sample control description 2",
+    "name": "control-name-2",
+    "saved": {
+      "at_time": { "$date": "2023-02-20T14:30:00Z" },
+      "by_user": "user002",
+      "correlation_id": "corr002",
+      "from_ip": "10.0.0.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439013" },
+    "created": {
+      "at_time": { "$date": "2023-03-10T09:15:00Z" },
+      "by_user": "user003",
+      "correlation_id": "corr003",
+      "from_ip": "172.16.0.1"
+    },
+    "description": "Sample control description 3",
+    "name": "control-name-3",
+    "saved": {
+      "at_time": { "$date": "2023-03-10T09:15:00Z" },
+      "by_user": "user003",
+      "correlation_id": "corr003",
+      "from_ip": "172.16.0.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439014" },
+    "created": {
+      "at_time": { "$date": "2023-04-05T16:45:00Z" },
+      "by_user": "user004",
+      "correlation_id": "corr004",
+      "from_ip": "192.168.2.1"
+    },
+    "description": "Sample control description 4",
+    "name": "control-name-4",
+    "saved": {
+      "at_time": { "$date": "2023-04-05T16:45:00Z" },
+      "by_user": "user004",
+      "correlation_id": "corr004",
+      "from_ip": "192.168.2.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439015" },
+    "created": {
+      "at_time": { "$date": "2023-05-12T11:20:00Z" },
+      "by_user": "user005",
+      "correlation_id": "corr005",
+      "from_ip": "10.0.1.1"
+    },
+    "description": "Sample control description 5",
+    "name": "control-name-5",
+    "saved": {
+      "at_time": { "$date": "2023-05-12T11:20:00Z" },
+      "by_user": "user005",
+      "correlation_id": "corr005",
+      "from_ip": "10.0.1.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439016" },
+    "created": {
+      "at_time": { "$date": "2023-06-18T13:00:00Z" },
+      "by_user": "user006",
+      "correlation_id": "corr006",
+      "from_ip": "172.16.1.1"
+    },
+    "description": "Sample control description 6",
+    "name": "control-name-6",
+    "saved": {
+      "at_time": { "$date": "2023-06-18T13:00:00Z" },
+      "by_user": "user006",
+      "correlation_id": "corr006",
+      "from_ip": "172.16.1.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439017" },
+    "created": {
+      "at_time": { "$date": "2023-07-22T08:45:00Z" },
+      "by_user": "user007",
+      "correlation_id": "corr007",
+      "from_ip": "192.168.3.1"
+    },
+    "description": "Sample control description 7",
+    "name": "control-name-7",
+    "saved": {
+      "at_time": { "$date": "2023-07-22T08:45:00Z" },
+      "by_user": "user007",
+      "correlation_id": "corr007",
+      "from_ip": "192.168.3.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439018" },
+    "created": {
+      "at_time": { "$date": "2023-08-30T15:30:00Z" },
+      "by_user": "user008",
+      "correlation_id": "corr008",
+      "from_ip": "10.0.2.1"
+    },
+    "description": "Sample control description 8",
+    "name": "control-name-8",
+    "saved": {
+      "at_time": { "$date": "2023-08-30T15:30:00Z" },
+      "by_user": "user008",
+      "correlation_id": "corr008",
+      "from_ip": "10.0.2.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439019" },
+    "created": {
+      "at_time": { "$date": "2023-09-14T12:15:00Z" },
+      "by_user": "user009",
+      "correlation_id": "corr009",
+      "from_ip": "172.16.2.1"
+    },
+    "description": "Sample control description 9",
+    "name": "control-name-9",
+    "saved": {
+      "at_time": { "$date": "2023-09-14T12:15:00Z" },
+      "by_user": "user009",
+      "correlation_id": "corr009",
+      "from_ip": "172.16.2.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439020" },
+    "created": {
+      "at_time": { "$date": "2023-10-25T09:00:00Z" },
+      "by_user": "user010",
+      "correlation_id": "corr010",
+      "from_ip": "192.168.4.1"
+    },
+    "description": "Sample control description 10",
+    "name": "control-name-10",
+    "saved": {
+      "at_time": { "$date": "2023-10-25T09:00:00Z" },
+      "by_user": "user010",
+      "correlation_id": "corr010",
+      "from_ip": "192.168.4.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439021" },
+    "created": {
+      "at_time": { "$date": "2023-11-05T17:45:00Z" },
+      "by_user": "user011",
+      "correlation_id": "corr011",
+      "from_ip": "10.0.3.1"
+    },
+    "description": "Sample control description 11",
+    "name": "control-name-11",
+    "saved": {
+      "at_time": { "$date": "2023-11-05T17:45:00Z" },
+      "by_user": "user011",
+      "correlation_id": "corr011",
+      "from_ip": "10.0.3.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439022" },
+    "created": {
+      "at_time": { "$date": "2023-12-12T14:20:00Z" },
+      "by_user": "user012",
+      "correlation_id": "corr012",
+      "from_ip": "172.16.3.1"
+    },
+    "description": "Sample control description 12",
+    "name": "control-name-12",
+    "saved": {
+      "at_time": { "$date": "2023-12-12T14:20:00Z" },
+      "by_user": "user012",
+      "correlation_id": "corr012",
+      "from_ip": "172.16.3.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439023" },
+    "created": {
+      "at_time": { "$date": "2024-01-20T10:30:00Z" },
+      "by_user": "user013",
+      "correlation_id": "corr013",
+      "from_ip": "192.168.5.1"
+    },
+    "description": "Sample control description 13",
+    "name": "control-name-13",
+    "saved": {
+      "at_time": { "$date": "2024-01-20T10:30:00Z" },
+      "by_user": "user013",
+      "correlation_id": "corr013",
+      "from_ip": "192.168.5.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439024" },
+    "created": {
+      "at_time": { "$date": "2024-02-28T13:15:00Z" },
+      "by_user": "user014",
+      "correlation_id": "corr014",
+      "from_ip": "10.0.4.1"
+    },
+    "description": "Sample control description 14",
+    "name": "control-name-14",
+    "saved": {
+      "at_time": { "$date": "2024-02-28T13:15:00Z" },
+      "by_user": "user014",
+      "correlation_id": "corr014",
+      "from_ip": "10.0.4.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439025" },
+    "created": {
+      "at_time": { "$date": "2024-03-15T08:00:00Z" },
+      "by_user": "user015",
+      "correlation_id": "corr015",
+      "from_ip": "172.16.4.1"
+    },
+    "description": "Sample control description 15",
+    "name": "control-name-15",
+    "saved": {
+      "at_time": { "$date": "2024-03-15T08:00:00Z" },
+      "by_user": "user015",
+      "correlation_id": "corr015",
+      "from_ip": "172.16.4.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439026" },
+    "created": {
+      "at_time": { "$date": "2024-04-02T16:30:00Z" },
+      "by_user": "user016",
+      "correlation_id": "corr016",
+      "from_ip": "192.168.6.1"
+    },
+    "description": "Sample control description 16",
+    "name": "control-name-16",
+    "saved": {
+      "at_time": { "$date": "2024-04-02T16:30:00Z" },
+      "by_user": "user016",
+      "correlation_id": "corr016",
+      "from_ip": "192.168.6.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439027" },
+    "created": {
+      "at_time": { "$date": "2024-05-10T11:45:00Z" },
+      "by_user": "user017",
+      "correlation_id": "corr017",
+      "from_ip": "10.0.5.1"
+    },
+    "description": "Sample control description 17",
+    "name": "control-name-17",
+    "saved": {
+      "at_time": { "$date": "2024-05-10T11:45:00Z" },
+      "by_user": "user017",
+      "correlation_id": "corr017",
+      "from_ip": "10.0.5.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439028" },
+    "created": {
+      "at_time": { "$date": "2024-06-18T09:20:00Z" },
+      "by_user": "user018",
+      "correlation_id": "corr018",
+      "from_ip": "172.16.5.1"
+    },
+    "description": "Sample control description 18",
+    "name": "control-name-18",
+    "saved": {
+      "at_time": { "$date": "2024-06-18T09:20:00Z" },
+      "by_user": "user018",
+      "correlation_id": "corr018",
+      "from_ip": "172.16.5.1"
+    },
+    "status": "archived"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439029" },
+    "created": {
+      "at_time": { "$date": "2024-07-25T14:30:00Z" },
+      "by_user": "user019",
+      "correlation_id": "corr019",
+      "from_ip": "192.168.7.1"
+    },
+    "description": "Sample control description 19",
+    "name": "control-name-19",
+    "saved": {
+      "at_time": { "$date": "2024-07-25T14:30:00Z" },
+      "by_user": "user019",
+      "correlation_id": "corr019",
+      "from_ip": "192.168.7.1"
+    },
+    "status": "active"
+  },
+  {
+    "_id": { "$oid": "507f1f77bcf86cd799439030" },
+    "created": {
+      "at_time": { "$date": "2024-08-30T10:15:00Z" },
+      "by_user": "user020",
+      "correlation_id": "corr020",
+      "from_ip": "10.0.6.1"
+    },
+    "description": "Sample control description 20",
+    "name": "control-name-20",
+    "saved": {
+      "at_time": { "$date": "2024-08-30T10:15:00Z" },
+      "by_user": "user020",
+      "correlation_id": "corr020",
+      "from_ip": "10.0.6.1"
+    },
+    "status": "archived"
+  }
+]

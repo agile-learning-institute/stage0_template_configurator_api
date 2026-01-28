@@ -1,0 +1,867 @@
+[
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439101"
+    },
+    "video": "dQw4w9WgXcQ",
+    "transcript": "Welcome to our channel! Today we're exploring the fascinating world of artificial intelligence and machine learning. We'll cover the basics, discuss recent breakthroughs, and explore what the future might hold for AI technology.",
+    "replies": [
+      {
+        "comment": "This is absolutely amazing! I'm so excited to learn more about AI!"
+      },
+      {
+        "comment": "I can't wait to see what's coming next in this series!"
+      },
+      {
+        "comment": "This video is really informative and well explained."
+      },
+      {
+        "comment": "I'm surprised by how accessible this content is!"
+      },
+      {
+        "comment": "Great explanation, thank you for sharing!"
+      },
+      {
+        "comment": "This is exactly what I needed to understand the basics."
+      },
+      {
+        "comment": "I'm looking forward to the next episode!"
+      },
+      {
+        "comment": "The examples really helped clarify the concepts."
+      },
+      {
+        "comment": "This is so helpful!"
+      },
+      {
+        "comment": "I appreciate the clear explanations."
+      },
+      {
+        "comment": "Can't wait for more content like this!"
+      },
+      {
+        "comment": "Very well done!"
+      },
+      {
+        "comment": "This is exactly the kind of content I enjoy watching."
+      },
+      {
+        "comment": "Great video, keep up the good work!"
+      },
+      {
+        "comment": "I'm excited to try out some of these concepts myself!"
+      }
+    ],
+    "tags": [
+      "youtube",
+      "comments"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439102"
+    },
+    "video": "jNQXAC9IVRw",
+    "transcript": "In this tutorial, we'll be building a web application from scratch. We'll cover frontend development, backend APIs, database design, and deployment strategies. Follow along as we create a complete project step by step.",
+    "replies": [
+      {
+        "comment": "This is so frustrating! The code doesn't work for me!"
+      },
+      {
+        "comment": "I'm angry that the tutorial doesn't explain this part clearly."
+      },
+      {
+        "comment": "This is disgusting! The quality is terrible!"
+      },
+      {
+        "comment": "I'm afraid this approach won't work in production."
+      },
+      {
+        "comment": "This makes me sad because I really wanted to learn from this."
+      },
+      {
+        "comment": "I'm frustrated with the lack of documentation."
+      },
+      {
+        "comment": "This is absolutely terrible!"
+      },
+      {
+        "comment": "I'm so disappointed with this content."
+      },
+      {
+        "comment": "This approach worries me."
+      },
+      {
+        "comment": "I can't stand this kind of content!"
+      },
+      {
+        "comment": "This is so annoying and unhelpful!"
+      },
+      {
+        "comment": "I'm really upset about the quality here."
+      },
+      {
+        "comment": "This doesn't work and it's making me frustrated."
+      },
+      {
+        "comment": "I'm worried this won't help me at all."
+      },
+      {
+        "comment": "This is just so disappointing."
+      }
+    ],
+    "tags": [
+      "comments",
+      "sentiment-analysis"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439103"
+    },
+    "video": "kJQP7kiw5Fk",
+    "transcript": "Today we're reviewing the latest smartphone release. We'll go through the design, camera quality, performance benchmarks, battery life, and overall user experience. Let's dive in!",
+    "replies": [
+      {
+        "comment": "The battery life seems okay, nothing special."
+      },
+      {
+        "comment": "The camera specs are listed in the description."
+      },
+      {
+        "comment": "What's the price of this model?"
+      },
+      {
+        "comment": "The video mentions the processor but not the RAM amount."
+      },
+      {
+        "comment": "When was this phone released?"
+      },
+      {
+        "comment": "The screen size is 6.5 inches according to the specs."
+      },
+      {
+        "comment": "Is this available in all colors?"
+      },
+      {
+        "comment": "The review covers most aspects thoroughly."
+      },
+      {
+        "comment": "What storage options are available?"
+      },
+      {
+        "comment": "The video provides factual information about the device."
+      },
+      {
+        "comment": "Does it support wireless charging?"
+      },
+      {
+        "comment": "The review is informative and straightforward."
+      },
+      {
+        "comment": "What's the warranty period?"
+      },
+      {
+        "comment": "The specifications are clearly presented."
+      },
+      {
+        "comment": "Is there a headphone jack on this model?"
+      }
+    ],
+    "tags": [
+      "youtube"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439104"
+    },
+    "video": "9bZkp7q19f0",
+    "transcript": "Join us for a cooking adventure as we prepare a delicious three-course meal. We'll start with an appetizer, move to the main course, and finish with a decadent dessert. Let's get cooking!",
+    "replies": [
+      {
+        "comment": "This recipe looks amazing! I can't wait to try it!"
+      },
+      {
+        "comment": "I'm so happy I found this channel!"
+      },
+      {
+        "comment": "The presentation is beautiful!"
+      },
+      {
+        "comment": "I trust your recipes, they always turn out great!"
+      },
+      {
+        "comment": "This is surprisingly easy to follow!"
+      },
+      {
+        "comment": "I'm looking forward to making this for dinner tonight!"
+      },
+      {
+        "comment": "Great video! Very well explained!"
+      },
+      {
+        "comment": "I'm excited to share this with my family!"
+      },
+      {
+        "comment": "This looks absolutely delicious!"
+      },
+      {
+        "comment": "I trust this recipe will be perfect!"
+      },
+      {
+        "comment": "Can't wait to taste this!"
+      },
+      {
+        "comment": "Wonderful content as always!"
+      },
+      {
+        "comment": "This is going to be amazing!"
+      },
+      {
+        "comment": "I'm so grateful for this recipe!"
+      },
+      {
+        "comment": "Perfect timing for my dinner party!"
+      }
+    ],
+    "tags": [
+      "youtube",
+      "comments"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439105"
+    },
+    "video": "fJ9rUzIMcZQ",
+    "transcript": "In this video, we discuss the latest developments in renewable energy technology. We'll explore solar power innovations, wind energy advances, battery storage solutions, and the future of clean energy.",
+    "replies": [
+      {
+        "comment": "I'm frustrated that renewable energy isn't being adopted faster!"
+      },
+      {
+        "comment": "This is important information, thanks for sharing."
+      },
+      {
+        "comment": "I'm worried about climate change and need solutions now."
+      },
+      {
+        "comment": "The technology is promising but implementation is slow."
+      },
+      {
+        "comment": "I'm angry that governments aren't doing more!"
+      },
+      {
+        "comment": "This gives me hope for the future!"
+      },
+      {
+        "comment": "I'm disgusted by the lack of action on this issue."
+      },
+      {
+        "comment": "Great video explaining complex topics clearly!"
+      },
+      {
+        "comment": "This makes me sad because we need change urgently."
+      },
+      {
+        "comment": "I'm surprised by some of these innovations!"
+      },
+      {
+        "comment": "The pace of adoption is frustrating."
+      },
+      {
+        "comment": "This is encouraging progress!"
+      },
+      {
+        "comment": "I'm concerned about the costs involved."
+      },
+      {
+        "comment": "Educational content like this is valuable."
+      },
+      {
+        "comment": "We need to act faster on climate solutions."
+      }
+    ],
+    "tags": [
+      "sentiment-analysis"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439106"
+    },
+    "video": "L_jWHffIx5E",
+    "transcript": "Welcome to our fitness channel! Today we're doing a full body workout that you can do at home with no equipment. We'll focus on strength, cardio, and flexibility. Let's get moving!",
+    "replies": [
+      {
+        "comment": "This workout is energizing! I feel great after doing it!"
+      },
+      {
+        "comment": "I'm excited to try this routine!"
+      },
+      {
+        "comment": "Great workout! Thanks for the motivation!"
+      },
+      {
+        "comment": "I trust your workout routines, they're always effective!"
+      },
+      {
+        "comment": "This is surprisingly challenging!"
+      },
+      {
+        "comment": "I'm looking forward to the next workout!"
+      },
+      {
+        "comment": "This routine really works!"
+      },
+      {
+        "comment": "I'm excited to see results!"
+      },
+      {
+        "comment": "Perfect for my home gym setup!"
+      },
+      {
+        "comment": "I trust this will help me reach my fitness goals!"
+      },
+      {
+        "comment": "Can't wait to do this again tomorrow!"
+      },
+      {
+        "comment": "This is exactly what I needed!"
+      },
+      {
+        "comment": "Great form cues throughout the video!"
+      },
+      {
+        "comment": "I'm surprised by how effective this is!"
+      },
+      {
+        "comment": "This workout makes me feel amazing!"
+      }
+    ],
+    "tags": [
+      "youtube",
+      "sentiment-analysis"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439107"
+    },
+    "video": "M7FIvfx5J10",
+    "transcript": "In this episode, we're reviewing the top travel destinations for 2024. We'll cover budget-friendly options, luxury destinations, adventure travel, and hidden gems worth exploring.",
+    "replies": [
+      {
+        "comment": "I'm so excited to visit these places!"
+      },
+      {
+        "comment": "This makes me want to travel right now!"
+      },
+      {
+        "comment": "I'm afraid I can't afford these destinations."
+      },
+      {
+        "comment": "Great recommendations!"
+      },
+      {
+        "comment": "I'm frustrated that travel is so expensive."
+      },
+      {
+        "comment": "This video is inspiring!"
+      },
+      {
+        "comment": "I'm surprised by some of these suggestions!"
+      },
+      {
+        "comment": "This makes me sad that I can't travel right now."
+      },
+      {
+        "comment": "I trust these recommendations!"
+      },
+      {
+        "comment": "The budget options are helpful."
+      },
+      {
+        "comment": "I'm looking forward to planning my next trip!"
+      },
+      {
+        "comment": "This is exactly what I needed for travel planning!"
+      },
+      {
+        "comment": "Great video with practical advice!"
+      },
+      {
+        "comment": "I'm excited to explore these destinations!"
+      },
+      {
+        "comment": "The hidden gems section was particularly interesting."
+      }
+    ],
+    "tags": [
+      "comments"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439108"
+    },
+    "video": "otCpCn0l4Wo",
+    "transcript": "Today we're discussing personal finance tips for young adults. We'll cover budgeting, saving strategies, investing basics, credit management, and building long-term wealth.",
+    "replies": [
+      {
+        "comment": "This information is really valuable!"
+      },
+      {
+        "comment": "I'm worried about my financial future."
+      },
+      {
+        "comment": "This is exactly what I needed to hear!"
+      },
+      {
+        "comment": "I'm frustrated that no one taught me this in school."
+      },
+      {
+        "comment": "Great advice! I'm going to start implementing this."
+      },
+      {
+        "comment": "I'm sad I didn't learn this earlier."
+      },
+      {
+        "comment": "This gives me hope for my financial situation!"
+      },
+      {
+        "comment": "I trust these strategies will help me!"
+      },
+      {
+        "comment": "I'm angry that financial education isn't mandatory."
+      },
+      {
+        "comment": "This is surprisingly easy to understand!"
+      },
+      {
+        "comment": "I'm excited to take control of my finances!"
+      },
+      {
+        "comment": "The budgeting tips are really helpful!"
+      },
+      {
+        "comment": "This makes me feel more confident about money!"
+      },
+      {
+        "comment": "I'm looking forward to applying these concepts!"
+      },
+      {
+        "comment": "Great content for beginners!"
+      }
+    ],
+    "tags": [
+      "youtube",
+      "comments"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439109"
+    },
+    "video": "ZZ5LpwO-An4",
+    "transcript": "Join us as we explore the world of indie game development. We'll discuss game design principles, programming basics, art creation, sound design, and how to publish your first game.",
+    "replies": [
+      {
+        "comment": "This is so inspiring! I want to make my own game!"
+      },
+      {
+        "comment": "I'm excited to start learning game development!"
+      },
+      {
+        "comment": "This looks really difficult, I'm not sure I can do it."
+      },
+      {
+        "comment": "Great tutorial! Very informative!"
+      },
+      {
+        "comment": "I'm frustrated that programming is so hard to learn."
+      },
+      {
+        "comment": "This gives me confidence to try!"
+      },
+      {
+        "comment": "I'm surprised by how accessible game dev has become!"
+      },
+      {
+        "comment": "I'm sad that I didn't start learning earlier."
+      },
+      {
+        "comment": "This is amazing content!"
+      },
+      {
+        "comment": "I trust these tips will help me get started!"
+      },
+      {
+        "comment": "The art creation section was really helpful!"
+      },
+      {
+        "comment": "I'm looking forward to creating my first game!"
+      },
+      {
+        "comment": "This is exactly the motivation I needed!"
+      },
+      {
+        "comment": "Great breakdown of the process!"
+      },
+      {
+        "comment": "I'm excited to dive into game development!"
+      }
+    ],
+    "tags": [
+      "sentiment-analysis"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd79943910a"
+    },
+    "video": "YQHsXMglC9A",
+    "transcript": "In this video, we're testing out the latest productivity apps and tools. We'll review task managers, note-taking apps, calendar systems, and time-tracking software to help you be more productive.",
+    "replies": [
+      {
+        "comment": "This app looks really useful!"
+      },
+      {
+        "comment": "I'm frustrated that most of these cost money."
+      },
+      {
+        "comment": "Great reviews! Very thorough!"
+      },
+      {
+        "comment": "I'm worried about my data privacy with these apps."
+      },
+      {
+        "comment": "This is exactly what I was looking for!"
+      },
+      {
+        "comment": "I'm excited to try some of these apps!"
+      },
+      {
+        "comment": "I'm disgusted by the subscription pricing models."
+      },
+      {
+        "comment": "The comparisons are really helpful!"
+      },
+      {
+        "comment": "I'm sad that free alternatives aren't covered much."
+      },
+      {
+        "comment": "This video is really informative!"
+      },
+      {
+        "comment": "I'm surprised by some of these features!"
+      },
+      {
+        "comment": "Great recommendations!"
+      },
+      {
+        "comment": "I'm looking forward to testing these out!"
+      },
+      {
+        "comment": "The pros and cons breakdown was useful."
+      },
+      {
+        "comment": "This helps me make an informed decision!"
+      }
+    ],
+    "tags": [
+      "youtube",
+      "sentiment-analysis"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd79943910b"
+    },
+    "video": "kxqL7o6gFIE",
+    "transcript": "Welcome to our music theory series! Today we're learning about chord progressions, scales, and how to create memorable melodies. Whether you're a beginner or advanced musician, there's something here for everyone.",
+    "replies": [
+      {
+        "comment": "This is so helpful for my music studies!"
+      },
+      {
+        "comment": "I'm excited to apply these concepts to my compositions!"
+      },
+      {
+        "comment": "Great explanation of chord progressions!"
+      },
+      {
+        "comment": "I'm frustrated that music theory is so complex."
+      },
+      {
+        "comment": "This makes music theory much more accessible!"
+      },
+      {
+        "comment": "I trust this will improve my playing!"
+      },
+      {
+        "comment": "I'm surprised by how much I'm learning!"
+      },
+      {
+        "comment": "The examples are really clear!"
+      },
+      {
+        "comment": "I'm looking forward to the next lesson!"
+      },
+      {
+        "comment": "This is exactly what I needed!"
+      },
+      {
+        "comment": "Great video for beginners!"
+      },
+      {
+        "comment": "I'm excited to practice these concepts!"
+      },
+      {
+        "comment": "The scale explanations are really helpful!"
+      },
+      {
+        "comment": "This makes me want to play music right now!"
+      },
+      {
+        "comment": "Wonderful teaching style!"
+      }
+    ],
+    "tags": [
+      "comments",
+      "sentiment-analysis"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd79943910c"
+    },
+    "video": "ScMzIvxBSi4",
+    "transcript": "In this episode, we're reviewing the best books to read in 2024. We'll cover fiction, non-fiction, self-help, science, and history. Whether you're looking for entertainment or education, we have recommendations for you.",
+    "replies": [
+      {
+        "comment": "I'm excited to add these to my reading list!"
+      },
+      {
+        "comment": "Great recommendations! I trust your book picks!"
+      },
+      {
+        "comment": "I'm frustrated that I don't have time to read all of these."
+      },
+      {
+        "comment": "This video is inspiring me to read more!"
+      },
+      {
+        "comment": "I'm surprised by some of these selections!"
+      },
+      {
+        "comment": "I'm sad that my local library doesn't have all of these."
+      },
+      {
+        "comment": "Great diverse selection of books!"
+      },
+      {
+        "comment": "I'm looking forward to reading these!"
+      },
+      {
+        "comment": "The summaries are really helpful!"
+      },
+      {
+        "comment": "I'm excited to start with the fiction recommendations!"
+      },
+      {
+        "comment": "This is exactly what I needed for my book club!"
+      },
+      {
+        "comment": "Great video with thoughtful recommendations!"
+      },
+      {
+        "comment": "I trust these books will be worth reading!"
+      },
+      {
+        "comment": "This makes me want to visit a bookstore right now!"
+      },
+      {
+        "comment": "Perfect timing for my summer reading list!"
+      }
+    ],
+    "tags": [
+      "youtube"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd79943910d"
+    },
+    "video": "dQw4w9WgXcQ",
+    "transcript": "Today we're discussing mental health and wellness strategies. We'll cover stress management techniques, mindfulness practices, building healthy habits, and seeking professional help when needed.",
+    "replies": [
+      {
+        "comment": "This is so important! Thank you for covering this topic!"
+      },
+      {
+        "comment": "I'm afraid to talk about my mental health issues."
+      },
+      {
+        "comment": "This video gives me hope!"
+      },
+      {
+        "comment": "I'm frustrated that mental health isn't taken seriously enough."
+      },
+      {
+        "comment": "Great advice! I'm going to try these strategies."
+      },
+      {
+        "comment": "I'm sad that so many people struggle with this."
+      },
+      {
+        "comment": "This is really helpful information!"
+      },
+      {
+        "comment": "I'm angry that mental health services are so expensive."
+      },
+      {
+        "comment": "I'm surprised by how simple some of these techniques are!"
+      },
+      {
+        "comment": "This makes me feel less alone."
+      },
+      {
+        "comment": "I'm excited to try mindfulness practices!"
+      },
+      {
+        "comment": "Great resource for people who need help!"
+      },
+      {
+        "comment": "I'm looking forward to implementing these strategies!"
+      },
+      {
+        "comment": "This is exactly what I needed to hear!"
+      },
+      {
+        "comment": "Thank you for making this content!"
+      }
+    ],
+    "tags": [
+      "comments"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd79943910e"
+    },
+    "video": "jNQXAC9IVRw",
+    "transcript": "Join us as we explore the history of space exploration. We'll cover early rocket development, the space race, moon landings, space stations, and future missions to Mars and beyond.",
+    "replies": [
+      {
+        "comment": "This is absolutely fascinating!"
+      },
+      {
+        "comment": "I'm excited to learn more about space exploration!"
+      },
+      {
+        "comment": "Great overview of space history!"
+      },
+      {
+        "comment": "I'm worried about the costs of space programs."
+      },
+      {
+        "comment": "This makes me want to become an astronaut!"
+      },
+      {
+        "comment": "I'm surprised by some of these historical facts!"
+      },
+      {
+        "comment": "I'm frustrated that we're not doing more in space."
+      },
+      {
+        "comment": "Great video! Very educational!"
+      },
+      {
+        "comment": "I'm looking forward to future space missions!"
+      },
+      {
+        "comment": "This is inspiring content!"
+      },
+      {
+        "comment": "I trust this information is accurate!"
+      },
+      {
+        "comment": "The future missions section was really interesting!"
+      },
+      {
+        "comment": "This makes me excited about space exploration!"
+      },
+      {
+        "comment": "Great breakdown of historical milestones!"
+      },
+      {
+        "comment": "I'm excited to see what the future holds!"
+      }
+    ],
+    "tags": [
+      "youtube",
+      "comments",
+      "sentiment-analysis"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd79943910f"
+    },
+    "video": "kJQP7kiw5Fk",
+    "transcript": "In this tutorial, we're learning how to build a professional website from scratch. We'll cover HTML structure, CSS styling, JavaScript functionality, responsive design, and deployment.",
+    "replies": [
+      {
+        "comment": "This tutorial is really helpful!"
+      },
+      {
+        "comment": "I'm excited to build my own website!"
+      },
+      {
+        "comment": "I'm frustrated that CSS is so complicated."
+      },
+      {
+        "comment": "Great step-by-step explanation!"
+      },
+      {
+        "comment": "I'm worried my website won't look good."
+      },
+      {
+        "comment": "This is exactly what I needed!"
+      },
+      {
+        "comment": "I'm surprised by how much I'm learning!"
+      },
+      {
+        "comment": "I'm disgusted by how many frameworks I need to learn."
+      },
+      {
+        "comment": "Great tutorial for beginners!"
+      },
+      {
+        "comment": "I'm sad that I didn't start learning web development earlier."
+      },
+      {
+        "comment": "I trust this will help me build a great website!"
+      },
+      {
+        "comment": "I'm looking forward to finishing my project!"
+      },
+      {
+        "comment": "The responsive design section was really useful!"
+      },
+      {
+        "comment": "This makes web development seem more accessible!"
+      },
+      {
+        "comment": "I'm angry that web development has so many moving parts."
+      }
+    ],
+    "tags": [
+      "youtube",
+      "sentiment-analysis"
+    ]
+  }
+]

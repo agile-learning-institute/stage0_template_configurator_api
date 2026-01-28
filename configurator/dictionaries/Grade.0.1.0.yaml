@@ -1,0 +1,64 @@
+_locked: false
+file_name: Grade.0.1.0.yaml
+root:
+  additional_properties: false
+  description: Human and LLM Generated Classifications for Grading Purposes
+  name: root
+  properties:
+  - description: Mongo Document Identifier
+    name: _id
+    required: true
+    type: identifier
+  - description: The _id of the TestRun this grade is associated with.
+    name: run_id
+    required: true
+    type: identifier
+  - description: 'Youtube Video Identifier '
+    name: video_id
+    required: true
+    type: word
+  - description: Comment classifications
+    items:
+      additional_properties: false
+      description: Array item
+      name: item
+      properties:
+      - description: The comment text
+        name: comment
+        required: true
+        type: markdown
+      - description: When the LLM categorization began
+        name: start
+        required: false
+        type: date-time
+      - description: When the LLM categorization was completed
+        name: completed
+        required: false
+        type: date-time
+      - description: Sentiments
+        items:
+          description: Array item
+          name: item
+          ref: Classification
+          required: false
+          type: ref
+        name: classifications
+        required: true
+        type: array
+      required: false
+      type: object
+    name: replies
+    required: true
+    type: array
+  - description: Sentiment counts
+    items:
+      description: Array item
+      name: item
+      ref: ClassifiedAnalytics
+      required: false
+      type: ref
+    name: analytics
+    required: false
+    type: array
+  required: false
+  type: object

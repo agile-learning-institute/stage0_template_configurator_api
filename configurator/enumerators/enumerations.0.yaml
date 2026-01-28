@@ -1,0 +1,210 @@
+_locked: false
+enumerators:
+- name: default_status
+  values:
+  - description: Not Deleted
+    value: active
+  - description: Soft Delete Indicator
+    value: archived
+- description: Indicates whether a video is live content.
+  name: video_live_broadcast_content
+  values:
+  - description: The video is an active live broadcast.
+    value: live
+  - description: The video is an upcoming live broadcast.
+    value: upcoming
+  - description: The video is not an active/upcoming live broadcast.
+    value: none
+- description: The dimension of a video.
+  name: video_dimension
+  values:
+  - description: The video is 2d.
+    value: 2d
+  - description: The video is 3d.
+    value: 3d
+- description: The definition quality (high/standard) of a video.
+  name: video_definition
+  values:
+  - description: The video is high definition.
+    value: hd
+  - description: The video is standard definition.
+    value: sd
+- description: Indicates whether captions are available for a video.
+  name: video_caption
+  values:
+  - description: Captions are available
+    value: 'true'
+  - description: Captions are not available
+    value: 'false'
+- description: The projection format of the video.
+  name: video_projection
+  values:
+  - description: The video projection is rectangular.
+    value: rectangular
+  - description: The video projection is in 360 view.
+    value: '360'
+- description: The upload status of the video.
+  name: video_upload_status
+  values:
+  - description: The video has been deleted.
+    value: deleted
+  - description: The video upload failed.
+    value: failed
+  - description: The video has been processed.
+    value: processed
+  - description: The video has been rejected.
+    value: rejected
+  - description: The video has been uploaded.
+    value: uploaded
+- description: The reason why a video failed to upload.
+  name: video_failure_reason
+  values:
+  - description: There was a codec error.
+    value: codec
+  - description: There was a conversion error.
+    value: conversion
+  - description: The video file is empty.
+    value: emptyFile
+  - description: The video file format is invalid.
+    value: invalidFile
+  - description: The video file is too small.
+    value: tooSmall
+  - description: The upload was aborted.
+    value: uploadAborted
+- description: The reason an uploaded video was rejected by YouTube.
+  name: video_rejection_reason
+  values:
+  - description: There is a claim involving the video.
+    value: claim
+  - description: The video infringes on a copyright.
+    value: copyright
+  - description: The video is a duplicate.
+    value: duplicate
+  - description: The video is inappropriate.
+    value: inappropriate
+  - description: The video cannot legally be uploaded to YouTube.
+    value: legal
+  - description: The video's length is too long or too short.
+    value: length
+  - description: The video violates YouTube's Terms of Use.
+    value: termsOfUse
+  - description: The video uses a trademark without license.
+    value: trademark
+  - description: The video uploader's account is closed.
+    value: uploaderAccountClosed
+  - description: The video uploader's account has been suspended.
+    value: uploaderAccountSuspended
+- description: The privacy status of a video.
+  name: video_privacy_status
+  values:
+  - description: The video is private.
+    value: private
+  - description: The video is public.
+    value: public
+  - description: The video is unlisted.
+    value: unlisted
+- description: The license for a video.
+  name: video_license
+  values:
+  - description: The video is licensed under YouTube.
+    value: youtube
+  - description: The video is licensed under Creative Commons.
+    value: creativeCommon
+- description: The rating a viewer has given a comment.
+  name: comment_viewer_rating
+  values:
+  - description: The viewer liked the comment.
+    value: like
+  - description: The viewer has not rated the comment.
+    value: none
+- description: The moderation status of a comment.
+  name: comment_moderation_status
+  values:
+  - description: The comment is awaiting review.
+    value: heldForReview
+  - description: The comment has been flagged as likely spam.
+    value: likelySpam
+  - description: The comment is published.
+    value: published
+  - description: The comment was rejected.
+    value: rejected
+- name: sentiment_types
+  values:
+  - description: A general sentiment (+~-)
+    value: general
+  - description: An emotional sentiment (anger, joy, etc.)
+    value: emotional
+  - description: A design thinking sentiment
+    value: design_thinking
+- name: sentiment_general
+  values:
+  - description: A negative or disenting sentiment
+    value: negative
+  - description: A neutral sentiment
+    value: neutral
+  - description: A positive or encouraging sentiment
+    value: positive
+- name: sentiment_emotional
+  values:
+  - description: experiencing happiness, pleasure, or positive well-being
+    value: joy
+  - description: feeling confidence, safety, or belief in people or systems
+    value: trust
+  - description: looking forward to something expected or hoped for
+    value: anticipation
+  - description: reacting to something unexpected or novel
+    value: surprise
+  - description: emotionally neutral, factual, or informational state
+    value: neutral
+  - description: experiencing loss, disappointment, or emotional pain
+    value: sadness
+  - description: feeling irritation, hostility, or strong displeasure
+    value: anger
+  - description: experiencing anxiety, worry, or a sense of threat
+    value: fear
+  - description: feeling revulsion or strong aversion
+    value: disgust
+  - description: experiencing tension or irritation due to unmet expectations
+    value: frustration
+- name: sentiment_design_thinking
+  values:
+  - description: increases momentum, creativity, or motivation within the group
+    value: energizing
+  - description: validates ideas, people, or progress and builds psychological safety
+    value: affirming
+  - description: emotionally neutral or informational without strong impact
+    value: neutral
+  - description: introduces friction, discomfort, or unresolved conflict
+    value: tense
+  - description: actively prevents progress or stalls discussion and decision-making
+    value: blocking
+  - description: reduces energy, morale, or engagement over time
+    value: draining
+- name: job_status
+  values:
+  - description: Job has not yet started
+    value: scheduled
+  - description: Job is activey running
+    value: running
+  - description: Job has been completed
+    value: complete
+  - description: Job was cancelled before it started
+    value: cancelled
+  - description: Job was aborted during a run
+    value: aborted
+- name: ollama_models
+  values:
+  - description: ''
+    value: gpt-oss:20b
+  - description: ''
+    value: gpt-oss:120b
+  - description: ''
+    value: deepseek-r1:70b
+  - description: ''
+    value: qwen3-coder:30b
+  - description: ''
+    value: nemotron-3-nano:30b
+  - description: A Human
+    value: human
+file_name: enumerations.0.yaml
+version: 0

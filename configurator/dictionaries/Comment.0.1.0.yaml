@@ -1,0 +1,99 @@
+_locked: false
+file_name: Comment.0.1.0.yaml
+root:
+  additional_properties: false
+  description: A comment on a Post.
+  name: Comment
+  properties:
+  - description: The API resource's type. Value is youtube#comment.
+    name: kind
+    required: false
+    type: identifier
+  - description: The unique identifier for the Comment.
+    name: id
+    required: false
+    type: identifier
+  - description: The entity tag for the Comment.
+    name: etag
+    required: false
+    type: identifier
+  - additional_properties: false
+    description: Contains basic details about the Comment.
+    name: snippet
+    properties:
+    - description: The display name of the user who posted the Comment.
+      name: authorDisplayName
+      required: false
+      type: word
+    - description: The URL for the avatar of the user who posted the Comment.
+      name: authorProfileImageUrl
+      required: false
+      type: url
+    - description: The URL of the Comment author's YouTube channel, if available.
+      name: authorChannelUrl
+      required: false
+      type: url
+    - additional_properties: false
+      description: This object encapsulates information about the Comment author's
+        YouTube channel, if available.
+      name: authorChannelId
+      properties:
+      - description: The ID of the Comment author's YouTube channel, if available.
+        name: value
+        required: false
+        type: identifier
+      required: false
+      type: object
+    - description: The ID of the YouTube channel associated with the Comment.
+      name: channelId
+      required: false
+      type: identifier
+    - description: The Comment's text, retrieved in either plain text or HTML. Even
+        plain text may differ from the original comment text.
+      name: textDisplay
+      required: false
+      type: sentence
+    - description: The original, raw text of the Comment as it was initially posted
+        or last updated. The original text is only returned to the authenticated user
+        if they are the Comment's author.
+      name: textOriginal
+      required: false
+      type: sentence
+    - description: The unique ID of the parent Comment. This property is only set
+        if the Comment was submitted as a reply to another comment.
+      name: parentId
+      required: false
+      type: identifier
+    - description: Indicates whether the current viewer can rate the Comment.
+      name: canRate
+      required: false
+      type: boolean
+    - description: The rating the viewer has given to this Comment. Enum values ['like',
+        'none'].
+      name: viewerRating
+      required: false
+      type: word
+    - description: The total number of likes (positive ratings) the Comment has received.
+      name: likeCount
+      required: false
+      type: count
+    - description: The Comment's moderation status. Only returned if the channel or
+        video owner authorizes the request, and request does not include the id filter
+        parameter. Enum values ['heldForReview', 'likelySpam', 'published', 'rejected'].
+      name: moderationStatus
+      required: false
+      type: word
+    - description: The date and time (in ISO 8601 format) when the Comment was orignally
+        published.
+      name: publishedAt
+      required: false
+      type: date-time
+    - description: The date and time (in ISO 8601 format) when the Comment was last
+        updated.
+      name: updatedAt
+      required: false
+      type: date-time
+    required: false
+    type: object
+  required: false
+  type: object

@@ -1,0 +1,55 @@
+# docker-compose.yaml for Editing MongoDB Configurations
+services:
+  ##################################
+  # Backing Services 
+  ##################################
+  # MongoDB backing service 
+  mongodb:
+    image: mongo:7.0.5
+    ports:
+      - 27017:27017
+    extra_hosts:
+      - "mongodb:127.0.0.1"
+    healthcheck:
+      test: echo "db.runCommand('ping')" | mongosh --port 27017 --quiet
+      interval: 5s
+      timeout: 30s
+      start_period: 0s
+      retries: 3
+    command: ["--bind_ip_all", "--port", "27017"]
+
+  ##################################
+  # MongoDB Configurator API - Dev Mode (mounts ./configurator to /input)
+  ##################################
+  mongodb_dev_api:
+    image: ghcr.io/agile-learning-institute/mongodb_configurator_api:latest
+    restart: no
+    ports:
+      - 8180:8081
+    environment:
+      MONGODB_REQUIRE_TLS: False
+      MONGO_DB_NAME: engagement
+      AUTO_PROCESS: False
+      LOAD_TEST_DATA: True
+      API_PORT: 8180
+      SPA_PORT: 8181
+      INPUT_FOLDER: /input
+    volumes:
+      - ${INPUT_FOLDER:-./configurator}:/input
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  mongodb_dev_spa:
+    image: ghcr.io/agile-learning-institute/mongodb_configurator_spa:latest
+    restart: no
+    environment:
+      API_HOST: mongodb_dev_api
+      API_PORT: 8081
+      SPA_PORT: 8181
+    ports:
+      - 8181:8181
+    depends_on:
+      mongodb_dev_api:
+        condition: service_started
+

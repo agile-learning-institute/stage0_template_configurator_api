@@ -1,0 +1,11 @@
+_locked: false
+description: A Samle Consume Collection for Templates
+file_name: Consume.yaml
+title: ''
+versions:
+- _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: Consume.0.1.0.0.json
+  version: 0.1.0.0

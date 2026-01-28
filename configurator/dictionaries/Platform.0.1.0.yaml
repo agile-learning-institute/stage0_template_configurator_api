@@ -1,0 +1,25 @@
+_locked: false
+file_name: Platform.0.1.0.yaml
+root:
+  additional_properties: false
+  description: A social media platform which hosts Users and Posts.
+  name: Platform
+  properties:
+  - description: The unique identifier for the Platform.
+    name: id
+    required: false
+    type: identifier
+  - description: The name of the Platform.
+    name: name
+    required: false
+    type: sentence
+  - description: The URL of the Platform.
+    name: url
+    required: false
+    type: url
+  - description: Credential Information for the Platform API?
+    name: credentials
+    required: false
+    type: sentence
+  required: false
+  type: object

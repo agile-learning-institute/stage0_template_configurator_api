@@ -1,0 +1,10 @@
+file_name: Video.yaml
+description: The video content published by a **Creator** on a **Platform**.
+versions:
+- _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: Video.0.1.0.0.json
+  version: 0.1.0.0
+
