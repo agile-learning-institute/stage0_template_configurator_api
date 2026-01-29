@@ -9,9 +9,9 @@ info:
 organization:
   name: Agile Crafts People
   founded: 2025
-  location: TBD
   slug: agile-crafts-people
   git_host: https://github.com
   git_org: agile-crafts-people
   docker_host: ghcr.io
   docker_org: agile-crafts-people
+

@@ -1,15 +1,16 @@
 <!-- TEMPLATE_SPECIFIC_START -->
 <!-- This section will be removed during template processing -->
 ## This is a Stage0 Merge Template
-This repository is a template to create a custom configurator_api for your system. See [Processing Instructions](./.stage0_template/process.yaml)]for details and [Test Specifications](./.stage0_template/Specifications/) for sample context data.
+This repository is a template to create a custom configurator_api for your system. See [Template Guide](https://github.com/agile-learning-institute/stage0_runbook_merge/blob/main/TEMPLATE_GUIDE.md) for information about stage0 merge templates. See the [Processing Instructions](./.stage0_template/process.yaml) for details about this template, and [Test Specifications](./.stage0_template/Specifications/) for sample context data required.
 
 Template Commands
 ```sh
-# Test the Template using test_expected 
-# Creates ~/temp content
+# Test the Template using test_expected output
+# Creates ~/tmp folders 
 make test
 
 ## Clean up temp files from testing
+## Removes tmp folders
 make clean
 
 ## Process this merge template using the provided context path
