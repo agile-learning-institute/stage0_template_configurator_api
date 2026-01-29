@@ -1,4 +1,4 @@
-file_name: {{item.name}}.{{item.version}}.yaml
+file_name: {{item.name}}.yaml
 description: {{item.description}}
 versions:
 - version: 0.1.0.0
