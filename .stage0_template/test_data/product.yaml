@@ -1,6 +1,0 @@
-organization: some-test-org
-organization_name: A long description of the organization
-product: floppy
-product_name: Floppy Fish
-product_description: Fish that can flop around
-product_url: https://github.com/some-test-org/floppy

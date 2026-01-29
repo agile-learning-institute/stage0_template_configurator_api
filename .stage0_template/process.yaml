@@ -1,60 +1,68 @@
 $schema: "https://stage0/schemas/process.schema.yaml"
-$id: "https://stage0/template-mongodb-api/process.yaml"
-title: Process file for a MongoDB configuration API template
+$id: "https://stage0/template-configurator-api/process.yaml"
+title: Process file for a MongoDB configurator API template
 version: "1.0"
 
 environment:
-  SERVICE_NAME: The service domain name (e.g., mongodb)
+  LOG_LEVEL: Work-around for issue 
 
 context:
-  - key: architecture
+  - key: info
     type: path
-    path: specifications.architecture
-  - key: service
-    type: selector
-    path: architecture.domains
-    filter:
-      property: name
-      value: "{{SERVICE_NAME}}"
-  - key: data_catalog
+    path: specifications.product.info
+  - key: org
     type: path
-    path: specifications.data_catalog
-  - key: product_info
+    path: specifications.product.organization
+  - key: dictionaries
     type: path
-    path: specifications.product
+    path: specifications.catalog.data_dictionaries
 
 requires:
-  - product_info.product
-  - product_info.organization
-  - service.data.creates
-  - data_catalog.dictionaries
+  - org.name
+  - org.founded
+  - org.git_host
+  - org.git_org
+  - org.docker_host
+  - org.docker_org
+  - info.name
+  - info.description
+  - info.slug
+  - info.developer_cli
+  - info.mongodb_name
+  - info.once
 
 templates:
-  - path: "./README.md"
-    merge: true
-  - path: "./makefile"
+  - path: "./.github/workflows/docker-push.yml"
     merge: true
   - path: "./Dockerfile"
     merge: true
   - path: "./docker-compose.yaml"
     merge: true
-  - path: "./input/data/enumerators.json"
+  - path: "./LICENSE"
+    merge: true
+  - path: "./README.md"
     merge: true
 
-  # Collections from data_catalog
-  - path: "./input/collections/collection.yaml.template"
+  # Makefile to overwrite Template Makefile
+  - path: "./Makefile.template"
     mergeFor:
-      items: data_catalog.dictionaries
-      output: "./input/collections/{{name}}.yaml"
+      items: info.once
+      output: "./Makefile"
 
-  # Dictionaries from specifications.dictionary
-  - path: "./input/dictionary/dictionary.yaml.template"
+  # Configurations from data_catalog
+  - path: "./configurator/configurations/collection.yaml.template"
     mergeFor:
-      items: specifications.dictionary
-      output: "./input/dictionary/{{name}}.1.0.0.yaml"
+      items: dictionaries
+      output: "./configurator/configurations/{{name}}.yaml"
 
-  # Types - process each type file individually
-  - path: "./input/dictionary/types/type.yaml.template"
+  # Dictionaries from catalog
+  - path: "./configurator/dictionaries/collection.yaml.template"
     mergeFor:
-      items: specifications.types
-      output: "./input/dictionary/types/{{name}}.yaml"
+      items: dictionaries
+      output: "./configurator/dictionaries/{{name}}.{{version}}.yaml"
+
+  # Test Data from data_catalog
+  - path: "./configurator/test_data/collection.json.template"
+    mergeFor:
+      items: dictionaries
+      output: "./configurator/test_data/{{name}}.{{version}}.0.json"

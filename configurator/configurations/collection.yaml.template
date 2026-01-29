@@ -1,0 +1,10 @@
+file_name: {{item.name}}.yaml
+description: {{item.description}}
+versions:
+- version: {{item.version}}.0
+  _locked: false
+  add_indexes: []
+  drop_indexes: []
+  migrations: []
+  test_data: {{item.name}}.{{item.version}}.0.json
+

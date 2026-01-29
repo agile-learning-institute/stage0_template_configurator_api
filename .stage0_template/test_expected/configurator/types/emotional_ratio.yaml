@@ -1,0 +1,21 @@
+_locked: false
+file_name: emotional_ratio.yaml
+root:
+  additional_properties: false
+  description: A ratio of emotional sentiments
+  name: emotional_ratio
+  properties:
+  - description: An emotion
+    name: emotion1
+    required: false
+    type: count
+  - description: An emotion
+    name: emotion2
+    required: false
+    type: count
+  - description: An emotion
+    name: emotion3
+    required: false
+    type: count
+  required: false
+  type: object

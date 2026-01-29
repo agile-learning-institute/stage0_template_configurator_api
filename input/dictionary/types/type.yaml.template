@@ -1,7 +1,0 @@
-# Type: {{item.name}}
-title: {{ item.content.title }}
-description: {{ item.content.description }}
-type: {{ item.content.type }}
-{% if item.content.max_length or item.content.maxLength %}max_length: {{ item.content.max_length or item.content.maxLength }}{% endif %}
-{% if item.content.min_length or item.content.minLength %}min_length: {{ item.content.min_length or item.content.minLength }}{% endif %}
-{% if item.content.pattern %}pattern: "{{ item.content.pattern }}"{% endif %} 

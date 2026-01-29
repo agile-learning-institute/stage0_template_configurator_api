@@ -1,5 +1,0 @@
-title: Sentence
-description: A sentence of text
-type: string
-min_length: 1
-max_length: 500 

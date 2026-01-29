@@ -1,7 +1,0 @@
-# Type: word
-title: Word
-description: A single word
-type: string
-max_length: 50
-min_length: 1
-pattern: "^[a-zA-Z0-9_-]+$" 

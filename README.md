@@ -1,62 +1,67 @@
+{% if false %}
 <!-- TEMPLATE_SPECIFIC_START -->
 <!-- This section will be removed during template processing -->
-## This is a Stage0 Template Merge Repo
-This repository is a template to create a custom mongodb_api for your system.
-For template usage instructions, see the [template README](.stage0_template/README.md).
-<!-- TEMPLATE_SPECIFIC_END -->
-# {{product_info.product}} Mongo API
+## This is a Stage0 Merge Template
+This repository is a template to create a custom configurator_api for your system. See [Template Guide](https://github.com/agile-learning-institute/stage0_runbook_merge/blob/main/TEMPLATE_GUIDE.md) for information about stage0 merge templates. See the [Processing Instructions](./.stage0_template/process.yaml) for details about this template, and [Test Specifications](./.stage0_template/Specifications/) for sample context data required.
 
-This is a mongoDB Configuration API, based on the [stage0_mongodb_api](https://github.com/agile-learning-institute/stage0_mongodb_api) utility. It provides a versioned configuration as code utility for the {{product_info.product}} product. 
-
-## Prerequisites
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose)
-- [Make](https://www.gnu.org/software/make/) which is standard on most OS's
-- [MongoDB Compass](https://www.mongodb.com/try/download/compass) to verify expected configurations
-
-## Contributing Guide
-The configurations here are versioned, it's important that you not change any of the existing dictionaries or types. You can update a collection configuration file to define a new version of the collection, and create a new dictionaries as needed. You can add a new version to the enumerators data file, or define new custom types as needed. 
-
-Edit the appropriate files. Then use ``make test`` and visit [http://localhost:8082](http://localhost:8082). You can edit the files in place, and refresh the page to load new configurations. You may need to drop the database in order to re-test processing, but the service does not need to be restarted.
-
-```
-INPUT_FOLDER/
-├── collections/                # Collection Configuration Files      
-│   ├── bot.yaml            
-│   ├── chain.yaml          
-│   ├── ...
-│   └── workshop.yaml
-├── data/                       # Test data and Enumerators
-│   ├── enumerators.json    
-│   ├── bot.1.0.0.1.json    
-│   ├── ...
-│   └── workshop.1.0.0.1.yaml
-└── dictionary/                 # Data Dictionaries (Simple Schema)
-    ├── types/                  # Simple Schema custom types
-    │   ├── word.yaml
-    │   ├── sentence.yaml
-    │   └── ...
-    ├── bot.1.0.0.1.yaml
-    ├── ...
-    └── workshop.1.2.3.4.yaml
-```
-
-## Developer Commands
-The make-test and make-prod commands both tail the API logs. You will have to press Ctrl-C to stop tailing the logs.
-
-```bash
-## Test /input configurations interactively
+Template Commands
+```sh
+# Test the Template using test_expected output
+# Creates ~/tmp folders 
 make test
 
-## Build and run the container to test before making a PR
-make prod
+## Clean up temp files from testing
+## Removes tmp folders
+make clean
 
-## Shut down services after testing
-make down
+## Process this merge template using the provided context path
+## NOTE: Destructive action, will remove .stage0_template 
+make merge <context path>
 ```
 
-## Reference Information
-- [Open API Specifications](./docs/openapi.yaml) for this API
-- [API curl examples](https://github.com/agile-learning-institute/stage0_mongodb_api/blob/main/CONTRIBUTING.md#curl-examples) if you want to do CLI based testing.
-- [Simple Schema standards](https://github.com/{{product_info.organization}}/{{product_info.product}}/blob/main/SIMPLE_SCHEMA.md) to understand the schema language used. 
-- [MongoDB Utility Reference](https://github.com/agile-learning-institute/stage0_mongodb_api/blob/main/REFERENCE.md) has configuration details.
-- [{{product_info.product}} Data Catalog](https://github.com/{{product_info.organization}}/{{product_info.product}}/blob/main/specifications/data_catalog.yaml) that initialized this repo.
+<!-- TEMPLATE_SPECIFIC_END -->
+{% endif %}
+# {{info.name}} Mongodb Configurator API
+
+This repo contains the MongodDB Database Configurations for the {{info.name}} system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
+
+## Prerequisites
+- {{info.name}} [Developers Edition]({{org.git_host}}/{{org.git_org}}/{{info.slug}}/blob/main/CONTRIBUTING.md)
+
+## Developer Commands
+```sh
+## Run the dev runtime to edit the configurations.
+make dev
+
+## Build the container for deployment
+make container
+
+## Run the packaged configuration. (Read Only configurations)
+make deploy
+
+## Open the browser for running containers
+make open
+
+## Shut down the containers
+make down
+
+## Generate Test Data See below
+make test_data COLLECTION VERSION
+```
+
+## Test Data
+- Test data is just json files in the [test_data](./configurator/test_data/) folder. You can use an LLM tool to generate test data from schema's. 
+
+## Workflow
+- First, create a feature branch for your work
+- run ``make dev`` and use the UI to update the configurations
+- When you're done making edits:
+    - Check that "Drop Database" and then "Configure Database" returns all green.
+    - Make sure ``make container`` runs without error.
+    - Use ``make deploy`` to review that the changes made it into the container.
+    - Use you source-control viewer to review source yaml changes to make sure no un-expected files were updated.
+    - Commit and Push your changes on the new branch
+    - Open a PR and request a review
+    - When the PR is merged to main, ci will publish an updated container for use by the team.
+    - After the PR is merged the branch is deleted - ``git checkout main`` and ``git pull``.
+    - Don't forget to ``make down`` to shut down the containers and free the ports.
