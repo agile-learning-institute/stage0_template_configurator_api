@@ -6,4 +6,4 @@ versions:
   add_indexes: []
   drop_indexes: []
   migrations: []
-  test_data: Profile.0.1.0.json
+  test_data: Profile.0.1.0.0.json

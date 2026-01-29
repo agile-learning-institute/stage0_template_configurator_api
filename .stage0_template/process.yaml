@@ -65,4 +65,4 @@ templates:
   - path: "./configurator/test_data/collection.json.template"
     mergeFor:
       items: dictionaries
-      output: "./configurator/test_data/{{name}}.{{version}}.json"
+      output: "./configurator/test_data/{{name}}.{{version}}.0.json"
