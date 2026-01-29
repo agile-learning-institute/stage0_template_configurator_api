@@ -1,7 +1,7 @@
 # Configurator API Merge Template
 
 ## Quick Start
-This is a template to create a custom configurator_api for your system. To use this template, care a new repo using this Template, then clone down that repo, and your system specifications repo, and use the ``make merge`` command as shown below. 
+This is a template to create a custom configurator_api for your system. To use this template, create a new repo using this template, then clone down your new repo, and your system specifications repo, and use the ``make merge`` command as shown below. 
 ```sh
 ## Merge your specifications with the template
 make merge ../SystemRepo/Specifications
@@ -32,3 +32,5 @@ make clean
 ## Context path typically ends with ``.Specifications``
 make merge {context path}
 ```
+
+NOTE: Pending https://github.com/agile-learning-institute/stage0_runbook_merge/issues/8 uses product.yaml.info.once hack to replace README.md with README.md.template - and Makefile with Makefile.template.
