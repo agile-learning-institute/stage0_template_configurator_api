@@ -1,7 +1,7 @@
 file_name: Profile.yaml
 description: User Profile associated with one **Identity**.
 versions:
-- version: 0.1.0
+- version: 0.1.0.0
   _locked: false
   add_indexes: []
   drop_indexes: []

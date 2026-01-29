@@ -1,7 +1,7 @@
 file_name: Identity.yaml
 description: The Identity of a person who is a user of the system.
 versions:
-- version: 0.1.0
+- version: 0.1.0.0
   _locked: false
   add_indexes: []
   drop_indexes: []
