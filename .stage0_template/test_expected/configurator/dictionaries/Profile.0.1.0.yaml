@@ -1,17 +1,17 @@
-file_name: Identity.0.1.0.0.yaml
+file_name: Profile.0.1.0.yaml
 root:
-  name: Identity
-  description: The Identity of a person who is a user of the system.
+  name: Profile
+  description: User Profile associated with one **Identity**.
   type: object
   properties:
   - name: _id
-    description: The unique identifier for the Identity.
+    description: The unique identifier for the Profile.
     type: identifier
   - name: name
     description: The searchable name of the document
     type: word
   - name: description
-    description: The description of the Identity.
+    description: The description of the Profile.
     type: sentence
   - name: created
     description: The tracking breadcrumb for when the document was created.
