@@ -29,3 +29,4 @@ RUN chown -R app:app /input && \
 
 # Switch back to app user (matching base image)
 USER app
+

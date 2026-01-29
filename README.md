@@ -1,3 +1,4 @@
+{% if false %}
 <!-- TEMPLATE_SPECIFIC_START -->
 <!-- This section will be removed during template processing -->
 ## This is a Stage0 Merge Template
@@ -19,6 +20,7 @@ make merge <context path>
 ```
 
 <!-- TEMPLATE_SPECIFIC_END -->
+{% endif %}
 # {{info.name}} Mongodb Configurator API
 
 This repo contains the MongodDB Database Configurations for the {{info.name}} system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
@@ -63,4 +65,3 @@ make test_data COLLECTION VERSION
     - When the PR is merged to main, ci will publish an updated container for use by the team.
     - After the PR is merged the branch is deleted - ``git checkout main`` and ``git pull``.
     - Don't forget to ``make down`` to shut down the containers and free the ports.
-

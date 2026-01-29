@@ -1,4 +1,4 @@
-.PHONY: help dev container deploy open down test merge
+.PHONY: help dev container deploy open down
 
 help:
 	@echo "Available commands:"
@@ -10,7 +10,7 @@ help:
 
 dev:
 	@echo "Shutting down centralized services..."
-	@{{org.developer_cli}} down || true
+	@{{info.developer_cli}} down || true
 	@echo "Starting local development services..."
 	@export INPUT_FOLDER=$$(pwd)/configurator && docker compose up -d
 	@make open
@@ -23,7 +23,7 @@ container:
 deploy:
 	@echo "Deploying packaged configuration..."
 	make down
-	{{org.developer_cli}} up configurator
+    {{info.developer_cli}} up configurator
 	make open
 
 open:
@@ -34,4 +34,5 @@ down:
 	@echo "Shutting down local containers..."
 	@docker compose down || true
 	@echo "Shutting down centralized services..."
-	@{{org.developer_cli}} down || true
+	@{{info.developer_cli}} down || true
+

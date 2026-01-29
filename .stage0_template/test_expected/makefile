@@ -23,7 +23,7 @@ container:
 deploy:
 	@echo "Deploying packaged configuration..."
 	make down
-	de up mongodb 
+    de up configurator
 	make open
 
 open:
