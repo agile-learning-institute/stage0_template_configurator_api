@@ -1,7 +1,7 @@
 # Configurator API Merge Template
 
 ## Quick Start
-This is a template to create a custom configurator_api for your system. To use this template, clone down your system specifications and use the ``make merge`` command as shown below. 
+This is a template to create a custom configurator_api for your system. To use this template, care a new repo using this Template, then clone down that repo, and your system specifications repo, and use the ``make merge`` command as shown below. 
 ```sh
 ## Merge your specifications with the template
 make merge ../SystemRepo/Specifications
