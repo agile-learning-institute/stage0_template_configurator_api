@@ -36,6 +36,8 @@ templates:
     merge: true
   - path: "./Dockerfile"
     merge: true
+  - path: "./docker-compose.yaml"
+    merge: true
   - path: "./LICENSE"
     merge: true
   - path: "./README.md"

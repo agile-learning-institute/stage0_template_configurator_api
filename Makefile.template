@@ -23,7 +23,7 @@ container:
 deploy:
 	@echo "Deploying packaged configuration..."
 	make down
-    {{info.developer_cli}} up configurator
+	{{info.developer_cli}} up configurator
 	make open
 
 open:

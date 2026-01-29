@@ -19,13 +19,13 @@ services:
   ##################################
   # MongoDB Configurator API - Dev Mode (mounts ./configurator to /input)
   configurator_api:
-    image: {{product.organization.git_host}}/.{{product.organization.git_org}}/{{product.organization.docker_org}}/configurator_api:latest
+    image: ghcr.io/agile-learning-institute/mongodb_configurator_api:latest
     restart: no
     ports:
       - 8180:8081
     environment:
       MONGODB_REQUIRE_TLS: False
-      MONGO_DB_NAME: {{product.info.mongodb_name}}
+      MONGO_DB_NAME: {{info.mongodb_name}}
       AUTO_PROCESS: False
       LOAD_TEST_DATA: True
       API_PORT: 8180
@@ -51,3 +51,4 @@ services:
     depends_on:
       configurator_api:
         condition: service_started
+
