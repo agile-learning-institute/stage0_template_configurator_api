@@ -14,7 +14,7 @@ test:
 	@echo "Debug: Checking specifications structure..."; \
 	find .stage0_template/Specifications -name "*.yaml" | head -10
 	@echo "Running the container..."; \
-	LOG_LEVEL="$${LOG_LEVEL:-INFO}"; \
+	LOG_LEVEL="$${LOG_LEVEL:-DEBUG}"; \
 	docker run --rm \
 		-v "$$HOME/tmp/testRepo:/repo" \
 		-v "$$(pwd)/.stage0_template/specifications:/specifications" \

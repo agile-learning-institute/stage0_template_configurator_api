@@ -1,7 +1,7 @@
 file_name: Identity.0.1.0.0.yaml
 root:
   name: Identity
-  description: The Identity of a person who is a user of the system. 
+  description: The Identity of a person who is a user of the system.
   type: object
   properties:
   - name: _id
@@ -19,4 +19,3 @@ root:
   - name: saved
     description: The tracking breadcrumb for when the document was last saved.
     type: breadcrumb
-

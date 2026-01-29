@@ -3,13 +3,19 @@ $id: "https://stage0/template-configurator-api/process.yaml"
 title: Process file for a MongoDB configurator API template
 version: "1.0"
 
+environment:
+  LOG_LEVEL: Work-around for issue 
+
 context:
   - key: info
     type: path
-    path: product.info
+    path: specifications.product.info
   - key: org
     type: path
-    path: product.organization
+    path: specifications.product.organization
+  - key: dictionaries
+    type: path
+    path: specifications.catalog.data_dictionaries
 
 requires:
   - org.name
@@ -24,7 +30,6 @@ requires:
   - info.developer_cli
   - info.mongodb_name
   - info.once
-  - catalog.dictionaries
 
 templates:
   - path: "./.github/workflows/docker-push.yml"
@@ -45,17 +50,17 @@ templates:
   # Configurations from data_catalog
   - path: "./configurator/configurations/collection.yaml.template"
     mergeFor:
-      items: catalog.dictionaries
-      output: "./configurator/configurations/{{item.name}}.{{item.version}}.yaml"
+      items: dictionaries
+      output: "./configurator/configurations/{{name}}.{{version}}.yaml"
 
   # Dictionaries from catalog
-  - path: "./configurator/dictionaries/dictionary.yaml.template"
+  - path: "./configurator/dictionaries/collection.yaml.template"
     mergeFor:
-      items: catalog.dictionaries
-      output: "./configurator/dictionaries/{{item.name}}.{{item.version}}.yaml"
+      items: dictionaries
+      output: "./configurator/dictionaries/{{name}}.{{version}}.yaml"
 
   # Test Data from data_catalog
-  - path: "./configurator/test_data/types/type.yaml.template"
+  - path: "./configurator/test_data/collection.json.template"
     mergeFor:
-      items: catalog.dictionaries
-      output: "./configurator/test_data/types/{{item.name}}.{{item.version}}.json"
+      items: dictionaries
+      output: "./configurator/test_data/{{name}}.{{version}}.json"

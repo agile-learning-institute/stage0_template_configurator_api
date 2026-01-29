@@ -1,17 +1,17 @@
-file_name: {{name}}.{{version}}.yaml
+file_name: {{item.name}}.{{item.version}}.yaml
 root:
-  name: {{name}}
-  description: {{description}}
+  name: {{item.name}}
+  description: {{item.description}}
   type: object
   properties:
   - name: _id
-    description: The unique identifier for the {{name}}.
+    description: The unique identifier for the {{item.name}}.
     type: identifier
   - name: name
     description: The searchable name of the document
     type: word
   - name: description
-    description: The description of the {{name}}.
+    description: The description of the {{item.name}}.
     type: sentence
   - name: created
     description: The tracking breadcrumb for when the document was created.
