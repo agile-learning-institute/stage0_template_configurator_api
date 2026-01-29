@@ -53,7 +53,7 @@ templates:
   - path: "./configurator/configurations/collection.yaml.template"
     mergeFor:
       items: dictionaries
-      output: "./configurator/configurations/{{name}}.{{version}}.yaml"
+      output: "./configurator/configurations/{{name}}.yaml"
 
   # Dictionaries from catalog
   - path: "./configurator/dictionaries/collection.yaml.template"
