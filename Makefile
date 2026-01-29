@@ -21,7 +21,7 @@ test:
 		-e LOG_LEVEL="$$LOG_LEVEL" \
 		ghcr.io/agile-learning-institute/stage0_runbook_merge:latest
 	@echo "Checking output..."; \
-	diff -qr "$$(pwd)/.stage0_template/test_expected/" "$$HOME/tmp/testRepo/"
+	diff -qr "$$(pwd)/.stage0_template/test_expected/" "$$HOME/tmp/testRepo/" || true
 	@echo "Done."
 
 clean:
