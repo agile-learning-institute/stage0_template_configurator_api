@@ -4,6 +4,7 @@ info:
   slug: CreatorDashboard
   developer_cli: de
   mongodb_name: engagement
+  once: ["one"]
 
 organization:
   name: Agile Crafts People

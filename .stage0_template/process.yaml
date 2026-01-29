@@ -1,15 +1,15 @@
 $schema: "https://stage0/schemas/process.schema.yaml"
-$id: "https://stage0/template-mongodb-api/process.yaml"
+$id: "https://stage0/template-configurator-api/process.yaml"
 title: Process file for a MongoDB configurator API template
 version: "1.0"
 
 context:
+  - key: info
+    type: path
+    path: product.info
   - key: org
     type: path
     path: product.organization
-  - key: catalog
-    type: path
-    path: catalog
 
 requires:
   - org.name
@@ -18,11 +18,12 @@ requires:
   - org.git_org
   - org.docker_host
   - org.docker_org
-  - product.info.name
-  - product.info.description
-  - product.info.slug
-  - product.info.developer_cli
-  - product.info.mongodb_name
+  - info.name
+  - info.description
+  - info.slug
+  - info.developer_cli
+  - info.mongodb_name
+  - info.once
   - catalog.dictionaries
 
 templates:
@@ -38,23 +39,23 @@ templates:
   # Makefile to overwrite Template Makefile
   - path: "./Makefile.template"
     mergeFor:
-      items: ["one"]
+      items: info.once
       output: "./Makefile"
 
   # Configurations from data_catalog
   - path: "./configurator/configurations/collection.yaml.template"
     mergeFor:
       items: catalog.dictionaries
-      output: "./configurator/configurations/{{name}}.{{version}}.yaml"
+      output: "./configurator/configurations/{{item.name}}.{{item.version}}.yaml"
 
   # Dictionaries from catalog
   - path: "./configurator/dictionaries/dictionary.yaml.template"
     mergeFor:
       items: catalog.dictionaries
-      output: "./configurator/dictionaries/{{name}}.{{version}}.yaml"
+      output: "./configurator/dictionaries/{{item.name}}.{{item.version}}.yaml"
 
   # Test Data from data_catalog
   - path: "./configurator/test_data/types/type.yaml.template"
     mergeFor:
       items: catalog.dictionaries
-      output: "./configurator/test_data/types/{{name}}.{{version}}.json"
+      output: "./configurator/test_data/types/{{item.name}}.{{item.version}}.json"

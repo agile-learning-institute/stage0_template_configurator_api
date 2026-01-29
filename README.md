@@ -18,12 +18,12 @@ make merge <context path>
 ```
 
 <!-- TEMPLATE_SPECIFIC_END -->
-# {{product.info.name}} Mongodb Configurator API
+# {{info.name}} Mongodb Configurator API
 
-This repo contains the MongodDB Database Configurations for the {{product.info.name}} system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
+This repo contains the MongodDB Database Configurations for the {{info.name}} system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
 
 ## Prerequisites
-- {{product.info.name}} [Developers Edition]({{org.git_host}}/{{org.git_org}}/{{product.info.slug}}/blob/main/CONTRIBUTING.md)
+- {{info.name}} [Developers Edition]({{org.git_host}}/{{org.git_org}}/{{info.slug}}/blob/main/CONTRIBUTING.md)
 
 ## Developer Commands
 ```sh

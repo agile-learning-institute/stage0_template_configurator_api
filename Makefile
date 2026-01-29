@@ -12,14 +12,13 @@ test:
 	mkdir -p "$$TEMP_REPO"; \
 	cp -r . "$$TEMP_REPO"
 	@echo "Debug: Checking specifications structure..."; \
-	find .stage0_template/test_data -name "*.yaml" | head -10
+	find .stage0_template/Specifications -name "*.yaml" | head -10
 	@echo "Running the container..."; \
 	LOG_LEVEL="$${LOG_LEVEL:-INFO}"; \
 	docker run --rm \
 		-v "$$HOME/tmp/testRepo:/repo" \
-		-v "$$(pwd)/.stage0_template/test_data:/specifications" \
+		-v "$$(pwd)/.stage0_template/specifications:/specifications" \
 		-e LOG_LEVEL="$$LOG_LEVEL" \
-		-e SERVICE_NAME=mongodb \
 		ghcr.io/agile-learning-institute/stage0_runbook_merge:latest
 	@echo "Checking output..."; \
 	diff -qr "$$(pwd)/.stage0_template/test_expected/" "$$HOME/tmp/testRepo/"
@@ -32,7 +31,7 @@ clean:
 merge:
 	@CONTEXT_PATH="$(firstword $(filter-out $@,$(MAKECMDGOALS)))"; \
 	if [ -z "$$CONTEXT_PATH" ]; then \
-		echo "Usage: make merge /path/to/specifications"; \
+		echo "Usage: make merge /path/to/Specifications"; \
 		exit 1; \
 	fi; \
 	if [ ! -d "$$CONTEXT_PATH" ]; then \
@@ -45,7 +44,6 @@ merge:
 		-v "$$(pwd):/repo" \
 		-v "$$CONTEXT_PATH:/specifications" \
 		-e LOG_LEVEL="$$LOG_LEVEL" \
-		-e SERVICE_NAME=mongodb \
 		ghcr.io/agile-learning-institute/stage0_runbook_merge:latest
 
 %:
