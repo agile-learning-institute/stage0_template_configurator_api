@@ -4,7 +4,6 @@ title: Process file for a MongoDB configurator API template
 version: "1.0"
 
 environment:
-  LOG_LEVEL: Work-around for issue 
 
 context:
   - key: info
@@ -40,18 +39,12 @@ templates:
     merge: true
   - path: "./LICENSE"
     merge: true
-
-  # README.md to overwrite Template README.md
   - path: "./README.md.template"
-    mergeFor:
-      items: info.once
-      output: "./README.md"
-
-  # Makefile to overwrite Template Makefile
+    output: "./README.md"
+    merge: true
   - path: "./Makefile.template"
-    mergeFor:
-      items: info.once
-      output: "./Makefile"
+    output: "./Makefile"
+    merge: true
 
   # Configurations from data_catalog
   - path: "./configurator/configurations/collection.yaml.template"
