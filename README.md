@@ -32,5 +32,3 @@ make clean
 ## Context path typically ends with ``.Specifications``
 make merge {context path}
 ```
-
-NOTE: Pending https://github.com/agile-learning-institute/stage0_runbook_merge/issues/8 uses product.yaml.info.once hack to replace README.md with README.md.template - and Makefile with Makefile.template.
