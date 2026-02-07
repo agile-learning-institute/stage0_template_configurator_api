@@ -29,3 +29,7 @@ RUN chown -R app:app /input && \
 
 # Switch back to app user (matching base image)
 USER app
+
+# Port Number for the API
+ENV API_PORT=8385
+EXPOSE 8385

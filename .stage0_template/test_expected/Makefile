@@ -17,7 +17,7 @@ dev:
 
 container:
 	@echo "Building Docker container image..."
-	docker build -t $(IMAGE_NAME) .
+	docker build -t ghcr.io/agile-learning-institute/mentorhub_mongodb_api:latest .
 	make deploy
 
 deploy:

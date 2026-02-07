@@ -17,7 +17,7 @@ dev:
 
 container:
 	@echo "Building Docker container image..."
-	docker build -t $(IMAGE_NAME) .
+	docker build -t {{org.docker_host}}/{{org.docker_org}}/{{info.slug}}_mongodb_api:latest .
 	make deploy
 
 deploy:

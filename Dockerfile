@@ -30,3 +30,6 @@ RUN chown -R app:app /input && \
 # Switch back to app user (matching base image)
 USER app
 
+# Port Number for the API
+ENV API_PORT={{info.base_port + 2}}
+EXPOSE {{info.base_port + 2}}
