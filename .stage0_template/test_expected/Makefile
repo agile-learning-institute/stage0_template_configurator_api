@@ -10,7 +10,7 @@ help:
 
 dev:
 	@echo "Shutting down centralized services..."
-	@de down || true
+	@mh down || true
 	@echo "Starting local development services..."
 	@export INPUT_FOLDER=$$(pwd)/configurator && docker compose up -d
 	@make open
@@ -23,15 +23,15 @@ container:
 deploy:
 	@echo "Deploying packaged configuration..."
 	make down
-	de up mongodb
+	mh up mongodb
 	make open
 
 open:
 	@echo "Opening browser..."
-	open -a 'Google Chrome' 'http://localhost:8181' || google-chrome 'http://localhost:8181' || xdg-open 'http://localhost:8181'
+	open -a 'Google Chrome' 'http://localhost:8386' || google-chrome 'http://localhost:8386' || xdg-open 'http://localhost:8386'
 
 down:
 	@echo "Shutting down local containers..."
 	@docker compose down || true
 	@echo "Shutting down centralized services..."
-	@de down || true
+	@mh down || true

@@ -25,11 +25,11 @@ services:
       - 8180:8081
     environment:
       MONGODB_REQUIRE_TLS: False
-      MONGO_DB_NAME: {{info.mongodb_name}}
+      MONGO_DB_NAME: {{info.db_name}}
       AUTO_PROCESS: False
       LOAD_TEST_DATA: True
-      API_PORT: 8180
-      SPA_PORT: 8181
+      API_PORT: {{info.base_port + 2}}
+      SPA_PORT: {{info.base_port + 3}}
       INPUT_FOLDER: /input
     volumes:
       - ${INPUT_FOLDER:-./configurator}:/input
@@ -44,8 +44,8 @@ services:
     restart: no
     environment:
       API_HOST: configurator_api
-      API_PORT: 8081
-      SPA_PORT: 8181
+      API_PORT: {{info.base_port + 2}}
+      SPA_PORT: {{info.base_port + 3}}
     ports:
       - 8181:8181
     depends_on:

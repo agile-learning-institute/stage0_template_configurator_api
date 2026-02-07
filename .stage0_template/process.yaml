@@ -27,7 +27,7 @@ requires:
   - info.description
   - info.slug
   - info.developer_cli
-  - info.mongodb_name
+  - info.db_name
 
 templates:
   - path: "./.github/workflows/docker-push.yml"
