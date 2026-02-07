@@ -22,7 +22,7 @@ services:
     image: ghcr.io/agile-learning-institute/mongodb_configurator_api:latest
     restart: no
     ports:
-      - 8180:8081
+      - {{info.base_port + 2}}:{{info.base_port + 2}}
     environment:
       MONGODB_REQUIRE_TLS: False
       MONGO_DB_NAME: {{info.db_name}}
@@ -47,7 +47,7 @@ services:
       API_PORT: {{info.base_port + 2}}
       SPA_PORT: {{info.base_port + 3}}
     ports:
-      - 8181:8181
+      - {{info.base_port + 3}}:{{info.base_port + 3}}
     depends_on:
       configurator_api:
         condition: service_started
