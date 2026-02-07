@@ -23,12 +23,12 @@ container:
 deploy:
 	@echo "Deploying packaged configuration..."
 	make down
-	{{info.developer_cli}} up configurator
+	{{info.developer_cli}} up mongodb
 	make open
 
 open:
 	@echo "Opening browser..."
-	open -a 'Google Chrome' 'http://localhost:8181' || google-chrome 'http://localhost:8181' || xdg-open 'http://localhost:8181'
+	open -a 'Google Chrome' 'http://localhost:{{info.base_port + 3}}' || google-chrome 'http://localhost:{{info.base_port + 3}}' || xdg-open 'http://localhost:{{info.base_port + 3}}'
 
 down:
 	@echo "Shutting down local containers..."

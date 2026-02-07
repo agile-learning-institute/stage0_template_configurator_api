@@ -3,7 +3,16 @@ description: {{item.description}}
 versions:
 - version: {{item.version}}.0
   _locked: false
-  add_indexes: []
+  add_indexes: 
+  - name: Name Index
+    key:
+      name: 1
+    options:
+      unique: true
+  - name: Last Saved
+    key:
+      saved.at_time: -1
+    options: {}
   drop_indexes: []
   migrations: []
   test_data: {{item.name}}.{{item.version}}.0.json
