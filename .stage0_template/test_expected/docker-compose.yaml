@@ -2,10 +2,11 @@
 services:
   ##################################
   # MongoDB backing service 
+  ##################################
   mongodb:
     image: mongo:7.0.5
     ports:
-      - 27017:27017
+      - "127.0.0.1:27017:27017"
     extra_hosts:
       - "mongodb:127.0.0.1"
     healthcheck:
@@ -18,19 +19,22 @@ services:
 
   ##################################
   # MongoDB Configurator API - Dev Mode (mounts ./configurator to /input)
+  ##################################
   configurator_api:
     image: ghcr.io/agile-learning-institute/mongodb_configurator_api:latest
     restart: no
     ports:
-      - 8180:8081
+      - "127.0.0.1:8385:8385"
     environment:
       MONGODB_REQUIRE_TLS: False
+      ENABLE_DROP_DATABASE: True
       MONGO_DB_NAME: mentor_hub
       AUTO_PROCESS: False
       LOAD_TEST_DATA: True
       API_PORT: 8385
       SPA_PORT: 8386
       INPUT_FOLDER: /input
+      UI_HEADER: "Mentor Hub DEV MongoDB Configurations"
     volumes:
       - ${INPUT_FOLDER:-./configurator}:/input
     depends_on:
@@ -39,6 +43,7 @@ services:
 
   ##################################
   # MongoDB Configurator SPA
+  ##################################
   configurator_spa:
     image: ghcr.io/agile-learning-institute/mongodb_configurator_spa:latest
     restart: no
@@ -47,7 +52,7 @@ services:
       API_PORT: 8385
       SPA_PORT: 8386
     ports:
-      - 8181:8181
+      - "127.0.0.1:8386:8386"
     depends_on:
       configurator_api:
         condition: service_started

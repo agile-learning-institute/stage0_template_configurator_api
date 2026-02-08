@@ -1,7 +1,7 @@
 file_name: Profile.0.1.0.yaml
 root:
   name: Profile
-  description: User Profile associated with one **Identity**.
+  description: User Preferences associated with one **Identity**.
   type: object
   properties:
   - name: _id
