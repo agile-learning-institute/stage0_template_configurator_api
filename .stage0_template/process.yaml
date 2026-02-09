@@ -17,17 +17,18 @@ context:
     path: specifications.catalog.data_dictionaries
 
 requires:
+  - info.name
+  - info.description
+  - info.slug
+  - info.developer_cli
+  - info.db_name
   - org.name
   - org.founded
   - org.git_host
   - org.git_org
   - org.docker_host
   - org.docker_org
-  - info.name
-  - info.description
-  - info.slug
-  - info.developer_cli
-  - info.db_name
+  - dictionaries
 
 templates:
   - path: "./.github/workflows/docker-push.yml"
@@ -55,10 +56,10 @@ templates:
   - path: "./configurator/dictionaries/collection.yaml.template"
     mergeFor:
       items: dictionaries
-      output: "./configurator/dictionaries/{{name}}.{{version}}.yaml"
+      output: "./configurator/dictionaries/{{name}}.0.1.0.yaml"
 
   # Test Data from data_catalog
   - path: "./configurator/test_data/collection.json.template"
     mergeFor:
       items: dictionaries
-      output: "./configurator/test_data/{{name}}.{{version}}.0.json"
+      output: "./configurator/test_data/{{name}}.0.1.0.0.json"

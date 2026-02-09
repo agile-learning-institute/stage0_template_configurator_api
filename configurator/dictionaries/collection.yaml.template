@@ -1,4 +1,4 @@
-file_name: {{item.name}}.{{item.version}}.yaml
+file_name: {{item.name}}.0.1.0.yaml
 root:
   name: {{item.name}}
   description: {{item.description}}
