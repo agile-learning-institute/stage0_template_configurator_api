@@ -1,4 +1,4 @@
-.PHONY: help dev container deploy open down
+.PHONY: help dev container push build-publish deploy open down
 
 help:
 	@echo "Available commands:"
@@ -17,8 +17,18 @@ dev:
 
 container:
 	@echo "Building Docker container image..."
-	docker build -t ghcr.io/agile-learning-institute/mentorhub_mongodb_api:latest .
+	DOCKER_BUILDKIT=0 docker build -t ghcr.io/agile-learning-institute/mentorhub_mongodb_api:latest .
 	make deploy
+
+push:
+	@echo "Pushing Docker container image..."
+	@docker push ghcr.io/agile-learning-institute/mentorhub_mongodb_api:latest
+	@echo "Pushed: ghcr.io/agile-learning-institute/mentorhub_mongodb_api:latest"
+
+build-publish:
+	@echo "Building and pushing Docker container image..."
+	make container
+	make push
 
 deploy:
 	@echo "Deploying packaged configuration..."
