@@ -18,7 +18,6 @@ dev:
 container:
 	@echo "Building Docker container image..."
 	DOCKER_BUILDKIT=0 docker build -t ghcr.io/agile-learning-institute/mentorhub_mongodb_api:latest .
-	make deploy
 
 push:
 	@echo "Pushing Docker container image..."

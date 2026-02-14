@@ -18,7 +18,6 @@ dev:
 container:
 	@echo "Building Docker container image..."
 	DOCKER_BUILDKIT=0 docker build -t {{org.docker_host}}/{{org.docker_org}}/{{info.slug}}_mongodb_api:latest .
-	make deploy
 
 push:
 	@echo "Pushing Docker container image..."
