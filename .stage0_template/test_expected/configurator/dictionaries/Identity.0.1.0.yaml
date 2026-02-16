@@ -19,3 +19,7 @@ root:
   - name: saved
     description: The tracking breadcrumb for when the document was last saved.
     type: breadcrumb
+  - name: status
+    description: Status of the document
+    type: enum
+    enums: default_status
