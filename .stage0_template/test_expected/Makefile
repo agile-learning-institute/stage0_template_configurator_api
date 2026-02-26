@@ -1,4 +1,5 @@
-.PHONY: help dev container push build-publish deploy open down
+.PHONY: help dev container push build-publish build-package publish-package delete-package deploy open down
+ORG ?= agile-learning-institute
 
 help:
 	@echo "Available commands:"
@@ -28,6 +29,12 @@ build-publish:
 	@echo "Building and pushing Docker container image..."
 	make container
 	make push
+
+build-package: container
+publish-package: push
+delete-package:
+	@echo "Deleting container package..."
+	@gh api -X DELETE "/orgs/$(ORG)/packages/container/mentorhub_mongodb_api" 2>/dev/null || true
 
 deploy:
 	@echo "Deploying packaged configuration..."
