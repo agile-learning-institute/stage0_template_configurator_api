@@ -1,4 +1,4 @@
-.PHONY: help dev container push build-publish build-package publish-package delete-package deploy open down
+.PHONY: help dev container push build-package publish-package delete-package deploy open down
 ORG ?= agile-learning-institute
 
 help:
@@ -34,7 +34,7 @@ build-package: container
 publish-package: push
 delete-package:
 	@echo "Deleting container package..."
-	@gh api -X DELETE "/orgs/$(ORG)/packages/container/mentorhub_mongodb_api" 2>/dev/null || true
+	@gh api -X DELETE "/orgs/agile-learning-institute/packages/container/mentorhub_mongodb_api" 2>/dev/null || true
 
 deploy:
 	@echo "Deploying packaged configuration..."
