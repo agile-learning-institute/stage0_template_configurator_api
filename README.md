@@ -1,12 +1,12 @@
 # Configurator API Merge Template
 
 ## Quick Start
-This is a template to create a custom configurator_api for your system. To use this template, create a new repo using this template, then clone down your new repo, and your system specifications repo, and use the ``make merge`` command as shown below. 
+This is a template to create a custom configurator_api for your system. To use this template, create a new repo using this template, then clone down your new repo, and edit the product.yaml and catalog.yaml files found in .stage0_template/Specifications/ and then use the ``make merge`` command as shown below. 
 ```sh
 ## Merge your specifications with the template
-make merge ../SystemRepo/Specifications
+make merge .stage0_template/Specifications
 ```
-and bob's your uncle, you have a Configurator API repo ready to go, refresh you view of the README for more information, or just run ``make dev`` to start working with your database configurations.
+And then you should have a functional Schema Manager of your very own. Refresh you view of the README for more information, or just run ``make dev`` to start working with your schema's.
 
 ## Contributing
 See [Template Guide](https://github.com/agile-learning-institute/stage0_runbook_merge/blob/main/TEMPLATE_GUIDE.md) for information about stage0 merge templates. See the [Processing Instructions](./.stage0_template/process.yaml) for details about this template, and [Test Specifications](./.stage0_template/Specifications/) for sample context data required.

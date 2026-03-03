@@ -34,7 +34,7 @@ services:
       API_PORT: {{info.base_port + 2}}
       SPA_PORT: {{info.base_port + 3}}
       INPUT_FOLDER: /input
-      UI_HEADER: "{{info.name}} DEV MongoDB Configurations"
+      UI_HEADER: "{{info.name}} Schemas DEV MODE"
     volumes:
       - ${INPUT_FOLDER:-./configurator}:/input
     depends_on:
