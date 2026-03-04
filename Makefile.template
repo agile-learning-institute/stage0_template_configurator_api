@@ -24,6 +24,8 @@ container:
 
 process:
 	@echo "Running Configure Database via API on port $(API_PORT)..."
+	@export INPUT_FOLDER=$$(pwd)/configurator && docker compose down
+	@export INPUT_FOLDER=$$(pwd)/configurator && docker compose up -d
 	@mkdir -p artifacts
 	@set -e; \
 	  STATUS=$$(curl -sS -o artifacts/process_all_configurations.json -w "%{http_code}" -X POST "http://localhost:$(API_PORT)/api/configurations/"); \
