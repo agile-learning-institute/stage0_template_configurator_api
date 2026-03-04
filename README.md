@@ -1,7 +1,7 @@
 # Configurator API Merge Template
 
 ## Quick Start
-This is a template to create a custom configurator_api for your system. To use this template, create a new repo using this template, then clone down your new repo, and edit the product.yaml and catalog.yaml files found in .stage0_template/Specifications/ and then use the ``make merge`` command as shown below. 
+This is a template to create a custom configurator_api for your system. To use this template, create a new repo using this template, then clone down your new repo. Edit the product.yaml and catalog.yaml files found in .stage0_template/Specifications/ and then use the ``make merge`` command as shown below. 
 ```sh
 ## Merge your specifications with the template
 make merge .stage0_template/Specifications

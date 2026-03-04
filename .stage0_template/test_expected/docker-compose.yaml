@@ -34,7 +34,7 @@ services:
       API_PORT: 8385
       SPA_PORT: 8386
       INPUT_FOLDER: /input
-      UI_HEADER: "Mentor Hub DEV MongoDB Configurations"
+      UI_HEADER: "Mentor Hub Schemas DEV MODE"
     volumes:
       - ${INPUT_FOLDER:-./configurator}:/input
     depends_on:
