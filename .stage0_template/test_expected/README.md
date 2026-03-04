@@ -13,6 +13,9 @@ make dev
 ## Build the container for deployment
 make container
 
+## Process all configurations via the API (Configure Database)
+make process
+
 ## Run the packaged configuration. (Read Only configurations)
 make deploy
 
@@ -27,7 +30,16 @@ make test_data COLLECTION VERSION
 ```
 
 ## Test Data
-- Test data is just json files in the [test_data](./configurator/test_data/) folder. You can use an LLM tool to generate test data from schema's. 
+- Test data is just json files in the [test_data](./configurator/test_data/) folder.
+- This repo includes a **Tasks framework** under the `Tasks/` folder; see `Tasks/README.md` for how to:
+  - Discover and run tasks (including **Run as needed** tasks like `AS_NEEDED.T100.generate_test_data.md`).
+  - Use agents to generate schema‑compliant test data from dictionaries, enumerators, and type definitions.
+
+## Configure Database (non-interactive)
+
+- **make process** calls the same API endpoint as the SPA **Configure Database** button (`POST /api/configurations/`) against the locally running API container (port `8385`).  
+- The resulting event JSON is written to `artifacts/process_all_configurations.json` and validated with `jq` to ensure the top-level status is `"SUCCESS"`.  
+- If the command fails, inspect that JSON file for detailed error information about configuration or test‑data import issues.
 
 ## Workflow
 - First, create a feature branch for your work
