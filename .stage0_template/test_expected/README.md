@@ -1,6 +1,6 @@
-# Mentor Hub Mongodb Configurator API
+# Mentor Hub MongoDB configurator API
 
-This repo contains the MongodDB Database Configurations for the Mentor Hub system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
+This repo contains the MongoDB database configurations for the Mentor Hub system. You can use the following commands to test, edit, and package these configurations. Note that the configuration files are just yaml files in the configurator folder - after you have made and tested changes you still need to commit your changes to a branch, and merge a PR to make them available to the other developers. 
 
 ## Prerequisites
 - Mentor Hub [Developers Edition](https://github.com/agile-learning-institute/mentorhub/blob/main/CONTRIBUTING.md)
